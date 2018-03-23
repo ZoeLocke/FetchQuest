@@ -49,12 +49,25 @@
           <argument>
             <kind>1</kind>
             <string>
-var file = file_text_open_read(working_directory + "startPage.txt");
-var texts = file_text_read_string(file);
+var file = file_text_open_read(working_directory + "Narrative_Files/startPage.txt");
+
+var str = "";
+while (!file_text_eof(file))
+   {
+   str += file_text_readln(file) + "#"
+   }
+file_text_close(file);
+
 
 draw_set_colour(c_black);
 draw_set_font(fnt_testFont);
-draw_text(244, 32, texts);
+
+draw_text_ext(244, 64, str, -1, 610);
+
+
+
+file_text_close(file);
+
 </string>
           </argument>
         </arguments>
