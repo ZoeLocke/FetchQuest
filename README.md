@@ -20,9 +20,9 @@ Some form of naivation, or even a map screen, will be required to allow players 
 - [ ] Navigation
 - [ ] Inventory
 - [ ] Cards
- - [ ] Display
- - [ ] Selection
- - [ ] Use
+  - [ ] Display
+  - [ ] Selection
+  - [ ] Use
 - [ ] Ending with credits
 
 ## Optional features
