@@ -7,7 +7,7 @@ A viral outbreak eradicates most of humanity, and many of those that survive are
 ## Gameplay
 The game is a choose your own adventure book style RPG. Players will be presented with a screen with text and an image, and a series of choices to make. 
 
-For inventory the players will collect cards representing items they find along their travels. Some cards will enable aditional options on gameplay screens, and some will be required to pass certain screens.
+A standard inventory in the style of text adventrues will be used to provide things to collect, quests to complete, and keys to areas.
 
 Some form of naivation, or even a map screen, will be required to allow players to return to specifc locations easily to turn in quests or return to a previously inaccessible area once they have the right card.
 
@@ -19,7 +19,7 @@ Some form of naivation, or even a map screen, will be required to allow players 
 - [ ] Choice selection
 - [ ] Navigation
 - [ ] Inventory
-- [ ] Cards
+- [ ] Inventory
   - [ ] Display
   - [ ] Selection
   - [ ] Use
@@ -31,4 +31,4 @@ Some form of naivation, or even a map screen, will be required to allow players 
 - [ ] Motion text (i.e. typed out style)
 - [ ] Animated graphics or motion comic style graphics
 - [ ] Map display
-- [ ] Card play animation
+- [ ] Inventory addition animation
