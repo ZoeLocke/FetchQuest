@@ -79,9 +79,12 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="System Sprites">
-      <sprite>sprites\spr_container</sprite>
       <sprite>sprites\spr_controllerIcon</sprite>
       <sprite>sprites\spr_textIcon</sprite>
+    </sprites>
+    <sprites name="Game Sprites">
+      <sprite>sprites\spr_container</sprite>
+      <sprite>sprites\spr_button</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -97,8 +100,12 @@
   </fonts>
   <objects name="objects">
     <objects name="System Objects">
-      <object>objects\obj_container</object>
       <object>objects\obj_controller</object>
+    </objects>
+    <objects name="Game Objects">
+      <object>objects\obj_choiceButton</object>
+      <object>objects\obj_container</object>
+      <object>objects\obj_choiceText</object>
       <object>objects\obj_narrativeText</object>
     </objects>
   </objects>
