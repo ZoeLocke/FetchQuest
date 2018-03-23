@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>///Configure variables
 global.page = "startPage"
+target = "startPage";
+
 </string>
           </argument>
         </arguments>
@@ -57,6 +59,8 @@ height = base_height;
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -73,15 +77,22 @@ height = base_height;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialise narrative text
-if(room == rm_main){
-    script_execute(scr_narrativeText, global.page);
-}
+            <string>///Change page variable and return controller script
+if(room == rm_startScreen){
+    room_goto(rm_main);
+} else {
+    global.page = target;
+    script_execute(scr_controller)
+};
+
+
 
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -98,21 +109,9 @@ if(room == rm_main){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialise choice buttons
-
-
-if(room == rm_main){
-    var i;
-    
-    for(i = 0; i &lt; 5; i++){
-        ini_open(working_directory + "Narrative_Files/choices.ini");
-        if(ini_key_exists(global.page, i)){
-            script_execute(scr_choiceButtons, global.page, i, 544, 640 + (i * 96));
-        }
-        ini_close();
-    }
-}
-
+            <string>///Reset button and start timer to move to new screen
+clickID.y -= 8;
+alarm_set(1, 2);
 </string>
           </argument>
         </arguments>
@@ -168,15 +167,16 @@ if (browser_width != width || browser_height != height)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Animate clicked buttons
+            <string>///Functionality for clicking buttons
 
 if(mouse_check_button_released(mb_left)){
-    var clickID = instance_position(mouse_x,mouse_y,obj_choiceButton);
+    clickID = instance_position(mouse_x,mouse_y,obj_choiceButton);
     if(clickID != noone){
         with(clickID){
-            y = y + 8;
-            alarm_set(0, 2);
+            y += 8;
         }
+        target = clickID.target;
+        alarm_set(0,2);
     }
 }
 </string>
