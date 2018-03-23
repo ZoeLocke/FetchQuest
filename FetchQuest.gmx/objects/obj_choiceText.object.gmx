@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_choiceButton</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,8 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
+            <string>///Initialise settings
+image_speed = 0;
 image_index = 1;
+str = "";
 </string>
           </argument>
         </arguments>
@@ -49,12 +51,16 @@ image_index = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_colour(c_black);
+            <string>///Display button text
+var parentButton = instance_position(x, y, obj_choiceButton);
+
+
+draw_set_colour(c_black);
 draw_set_font(fnt_testFont);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-draw_text(x, y, "jump around");
+draw_text(parentButton.x, parentButton.y, str);
 </string>
           </argument>
         </arguments>

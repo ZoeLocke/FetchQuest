@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>0</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -74,8 +74,44 @@ height = base_height;
           <argument>
             <kind>1</kind>
             <string>///Initialise narrative text
-script_execute(scr_narrativeText, global.page);
+if(room == rm_main){
+    script_execute(scr_narrativeText, global.page);
+}
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Initialise choice buttons
+
+
+if(room == rm_main){
+    var i;
+    
+    for(i = 0; i &lt; 5; i++){
+        ini_open(working_directory + "Narrative_Files/choices.ini");
+        if(ini_key_exists(global.page, i)){
+            script_execute(scr_choiceButtons, global.page, i, 544, 640 + (i * 96));
+        }
+        ini_close();
+    }
+}
 
 </string>
           </argument>
@@ -99,7 +135,8 @@ script_execute(scr_narrativeText, global.page);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
+            <string>///DISABLED - Scale canvas
+/*
 
 DISABLED AS IT WAS CAUSING PROBLEMS ON SMALLER SCREENS
 
@@ -111,6 +148,37 @@ if (browser_width != width || browser_height != height)
     scr_scaleCanvas(base_width, base_height, width, height, true);
     }
     */
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Animate clicked buttons
+
+if(mouse_check_button_released(mb_left)){
+    var clickID = instance_position(mouse_x,mouse_y,obj_choiceButton);
+    if(clickID != noone){
+        with(clickID){
+            y = y + 8;
+            alarm_set(0, 2);
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
