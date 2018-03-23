@@ -9,6 +9,7 @@
     <sprites name="System Sprites">
       <sprite>sprites\spr_container</sprite>
       <sprite>sprites\spr_controllerIcon</sprite>
+      <sprite>sprites\spr_textIcon</sprite>
     </sprites>
     <sprite>sprites\sprite2</sprite>
   </sprites>
@@ -16,15 +17,19 @@
     <background>background\bg_displayMap</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_scaleCanvas.gml</script>
+  </scripts>
   <objects name="objects">
     <objects name="System Objects">
       <object>objects\obj_container</object>
       <object>objects\obj_controller</object>
+      <object>objects\obj_text</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_main</room>
     <room>rooms\rm_setup</room>
+    <room>rooms\rm_main</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
