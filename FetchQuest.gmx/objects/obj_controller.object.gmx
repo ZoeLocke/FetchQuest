@@ -74,7 +74,7 @@ height = base_height;
           <argument>
             <kind>1</kind>
             <string>///Initialise narrative text
-script_execute(script2);
+script_execute(scr_narrativeText, global.page);
 
 
 </string>
