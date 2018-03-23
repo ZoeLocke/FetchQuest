@@ -5,9 +5,27 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprites name="System Sprites">
+      <sprite>sprites\spr_container</sprite>
+      <sprite>sprites\spr_controllerIcon</sprite>
+    </sprites>
+    <sprite>sprites\sprite2</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bg_displayMap</background>
+  </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <objects name="System Objects">
+      <object>objects\obj_container</object>
+      <object>objects\obj_controller</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_main</room>
+    <room>rooms\rm_setup</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
