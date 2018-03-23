@@ -3,6 +3,78 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="4" name="datafiles">
+    <datafiles number="4" name="Narrative_Files">
+      <datafile>
+        <name>intro.txt</name>
+        <exists>-1</exists>
+        <size>0</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>intro.txt</filename>
+      </datafile>
+      <datafile>
+        <name>startPage.txt</name>
+        <exists>-1</exists>
+        <size>446</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>startPage.txt</filename>
+      </datafile>
+      <datafile>
+        <name>choices.ini</name>
+        <exists>-1</exists>
+        <size>115</size>
+        <exportAction>2</exportAction>
+        <exportDir></exportDir>
+        <overwrite>0</overwrite>
+        <freeData>-1</freeData>
+        <removeEnd>0</removeEnd>
+        <store>0</store>
+        <ConfigOptions>
+          <Config name="Default">
+            <CopyToMask>9223372036854775807</CopyToMask>
+          </Config>
+        </ConfigOptions>
+        <filename>choices.ini</filename>
+      </datafile>
+    </datafiles>
+    <datafile>
+      <name>settings.ini</name>
+      <exists>-1</exists>
+      <size>60</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>settings.ini</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -11,7 +83,6 @@
       <sprite>sprites\spr_controllerIcon</sprite>
       <sprite>sprites\spr_textIcon</sprite>
     </sprites>
-    <sprite>sprites\sprite2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_displayMap</background>
@@ -19,16 +90,17 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_scaleCanvas.gml</script>
+    <script>scripts\scr_narrativeText.gml</script>
+    <script>scripts\script2.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="System Objects">
       <object>objects\obj_container</object>
       <object>objects\obj_controller</object>
-      <object>objects\obj_text</object>
+      <object>objects\obj_narrativeText</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_setup</room>
     <room>rooms\rm_main</room>
   </rooms>
   <help>
