@@ -9,13 +9,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1920mm"
-   height="1080mm"
-   viewBox="0 0 1920 1080"
+   width="1920"
+   height="1080"
+   viewBox="0 0 508 285.75001"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="MainScreenMockup.svg">
+   sodipodi:docname="MainScreenMockup.svg"
+   inkscape:export-filename="D:\Dropbox\CuddlyCthulhuCreatives\VideoGames\FetchQuest\Planning\MainScreenMockup.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -25,21 +28,22 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="4068.5771"
-     inkscape:cy="1874.1803"
+     inkscape:zoom="0.35"
+     inkscape:cx="1138.1067"
+     inkscape:cy="334.96811"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:pagecheckerboard="true"
-     inkscape:window-width="2560"
-     inkscape:window-height="1377"
-     inkscape:window-x="-8"
+     inkscape:window-width="1360"
+     inkscape:window-height="705"
+     inkscape:window-x="2552"
      inkscape:window-y="32"
      inkscape:window-maximized="1"
      inkscape:snap-page="true"
      showguides="true"
-     inkscape:guide-bbox="true" />
+     inkscape:guide-bbox="true"
+     units="px" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -56,17 +60,17 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,783.00001)">
+     transform="translate(0,-11.249941)">
     <rect
-       style="opacity:1;vector-effect:none;fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.05291667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       style="opacity:1;vector-effect:none;fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.01400087;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="rect812"
-       width="1920"
-       height="1080"
+       width="508"
+       height="285.75"
        x="0"
-       y="-783.00006" />
+       y="11.249941" />
     <g
        id="g928"
-       transform="translate(652.44189,-4.2458852)">
+       transform="matrix(0.26458333,0,0,0.26458333,177.85721,217.28707)">
       <rect
          y="-747.68854"
          x="209.52534"
@@ -88,7 +92,7 @@
     </g>
     <g
        id="g933"
-       transform="translate(47.742997,-466.02543)">
+       transform="matrix(0.26458333,0,0,0.26458333,17.863964,95.107898)">
       <rect
          style="opacity:1;vector-effect:none;fill:#ffd42a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.06237175;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
          id="rect820"
@@ -110,7 +114,7 @@
     </g>
     <g
        id="g938"
-       transform="translate(47.742997,38.685998)">
+       transform="matrix(0.26458333,0,0,0.26458333,17.863964,228.64613)">
       <rect
          y="-52.78772"
          x="142.20552"
@@ -131,31 +135,8 @@
            sodipodi:role="line">Choices</tspan></text>
     </g>
     <g
-       id="g1004"
-       transform="translate(649.25279,5.4824219e-5)">
-      <rect
-         y="-188.56068"
-         x="215.9449"
-         height="454.5574"
-         width="188.15778"
-         id="rect866"
-         style="opacity:1;vector-effect:none;fill:#ffd42a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.02715885;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:58.00872421px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Heavy';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.45021808"
-         x="-131.72511"
-         y="-295.36584"
-         id="text870"
-         transform="rotate(90)"><tspan
-           sodipodi:role="line"
-           id="tspan868"
-           x="-131.72511"
-           y="-295.36584"
-           style="stroke-width:1.45021808">Navigation</tspan></text>
-    </g>
-    <g
        id="g964"
-       transform="translate(-831.74278,452.34817)">
+       transform="matrix(0.26458333,0,0,0.26458333,-216.67095,338.10249)">
       <rect
          style="opacity:1;vector-effect:none;fill:#ffd42a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.00957588;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
          id="rect955"
@@ -177,23 +158,23 @@
     </g>
     <g
        id="g1009"
-       transform="translate(649.25279,5.4824219e-5)">
+       transform="matrix(0.26458333,0,0,0.26458333,119.02093,218.41047)">
       <rect
-         style="opacity:1;vector-effect:none;fill:#ffd42a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.04891886;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         style="opacity:1;vector-effect:none;fill:#ffd42a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0568602;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
          id="rect975"
-         width="610.45258"
+         width="824.73828"
          height="454.5574"
          x="431.89868"
          y="-188.56068" />
       <text
          id="text981"
          y="64.506775"
-         x="468.67267"
+         x="575.81555"
          style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:102.05871582px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Heavy';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.55146766"
          xml:space="preserve"><tspan
            style="stroke-width:2.55146766"
            y="64.506775"
-           x="468.67267"
+           x="575.81555"
            id="tspan979"
            sodipodi:role="line">Inventory</tspan></text>
     </g>

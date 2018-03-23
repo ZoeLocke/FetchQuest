@@ -41,3 +41,10 @@ for(i = 0; i < 5; i++){
     ini_close();
 }
 
+//Update image
+ini_open(working_directory + "Narrative_Files/choices.ini");
+var img = ini_read_real(global.page + "Image", "image_index", 0);
+with(obj_image){
+    image_index = img;
+};
+ini_close();

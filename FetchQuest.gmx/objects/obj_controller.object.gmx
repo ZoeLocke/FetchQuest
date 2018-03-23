@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///Configure variables
-global.page = "startPage"
-target = "startPage";
+global.page = "homeInterior"
+target = "homeInterior";
 
 </string>
           </argument>
