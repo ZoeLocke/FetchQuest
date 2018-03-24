@@ -55,7 +55,7 @@
     <instance objName="obj_controller" x="32" y="32" name="inst_6D45E594" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_image" x="1248" y="64" name="inst_E21DEAA2" locked="0" code="" scaleX="1.2415519952774" scaleY="1.29650092124939" colour="4294967295" rotation="0"/>
     <instance objName="obj_bugFixText" x="2272" y="864" name="inst_33E7A396" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_invContainer" x="1248" y="864" name="inst_288C454E" locked="0" code="" scaleX="31" scaleY="17" colour="4294967295" rotation="0"/>
+    <instance objName="obj_invContainer" x="1248" y="832" name="inst_288C454E" locked="0" code="" scaleX="31" scaleY="17" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

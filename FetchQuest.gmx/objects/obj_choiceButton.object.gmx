@@ -30,7 +30,7 @@ target = "NOTHING";
 inventoryGet = "NOTHING";
 inventoryNeed = "NOTHING";
 inventoryMissingTarget = "NOTHING";
-inventoryItemDestroy = "NOTHING";
+inventoryDestroy = "NOTHING";
 
 </string>
           </argument>

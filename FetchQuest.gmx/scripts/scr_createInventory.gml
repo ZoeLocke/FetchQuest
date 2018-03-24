@@ -6,7 +6,7 @@ global.inventory = ds_grid_create(5,8);
 
 //populate inventory
 ds_grid_set(global.inventory, 0,  0, "Favourite Bone");
-ds_grid_set(global.inventory, 1,  0, 1);
+ds_grid_set(global.inventory, 1,  0, 0);
 ds_grid_set(global.inventory, 2,  0, 0);
 ds_grid_set(global.inventory, 3,  0, "Covered in chips and tooth marks, and worn down to a perfect white,#this bone has served you well.");
 ds_grid_set(global.inventory, 4,  0, 0);
@@ -41,13 +41,13 @@ ds_grid_set(global.inventory, 2,  5, 0);
 ds_grid_set(global.inventory, 3,  5, "TEXT");
 ds_grid_set(global.inventory, 4,  5, 0);
 
-ds_grid_set(global.inventory, 0,  6, "NOTHING");
+ds_grid_set(global.inventory, 0,  6, "Teddy");
 ds_grid_set(global.inventory, 1,  6, 0);
 ds_grid_set(global.inventory, 2,  6, 0);
 ds_grid_set(global.inventory, 3,  6, "");
 ds_grid_set(global.inventory, 4,  6, 0);
 
-ds_grid_set(global.inventory, 0,  7, "NOTHING");
+ds_grid_set(global.inventory, 0,  7, "Shoe");
 ds_grid_set(global.inventory, 1,  7, 0);
 ds_grid_set(global.inventory, 2,  7, 0);
 ds_grid_set(global.inventory, 3,  7, "");
