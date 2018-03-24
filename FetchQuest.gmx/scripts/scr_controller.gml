@@ -14,8 +14,11 @@ var file = file_text_open_read(working_directory + "Narrative_Files/" + page + "
 while (!file_text_eof(file))str += file_text_readln(file) + "#";
 file_text_close(file);
 
-var narrativeText = instance_create(224, 32, obj_narrativeText);
+
+var narrativeText = instance_create(320, 64, obj_narrativeText);
 narrativeText.str = str;
+narrativeText.textX = 320;
+narrativeText.textY = 96;
 
 //Update choice buttons
 var i;
@@ -27,8 +30,8 @@ for(i = 0; i < 5; i++){
                
         var page = global.page;
         var choice = i;
-        var textX = 544;
-        var textY = 640 + (i * 96);
+        var textX = 736;
+        var textY = 832 + (i * 160);
         
         with(instance_create(textX, textY, obj_choiceButton)){
         
