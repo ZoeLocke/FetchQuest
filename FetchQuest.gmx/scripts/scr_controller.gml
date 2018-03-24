@@ -29,7 +29,7 @@ for(i = 0; i < 5; i++){
         var page = global.page;
         var choice = i;
         var textX = 736;
-        var textY = 832 + (i * 160);
+        var textY = 864 + (i * 128);
         
         with(instance_create(textX, textY, obj_choiceButton)){
         
@@ -55,17 +55,14 @@ ini_close();
 
 //Rebuild state buttons
 var stateButton;
-stateButton = instance_create(1808, 64, obj_stateButton);
+var stateText
+
+stateButton = instance_create(2400, 94, obj_stateButton);
 stateButton.target = "Restart";
+stateText = instance_create(stateButton.x, stateButton.y, obj_stateText)
+stateText.str = "Restart";
 
-stateButton = instance_create(1808, 160, obj_stateButton);
-stateButton.target = "Quit"
-
-var stateLabel;
-
-stateLabel = instance_create(1808, 64, obj_stateText);
-stateLabel.str = "Restart";
-
-stateLabel = instance_create(1808, 160, obj_stateText);
-stateLabel.str = "Quit";
-
+stateButton = instance_create(2400, 192, obj_stateButton);
+stateButton.target = "Quit";
+stateText = instance_create(stateButton.x, stateButton.y, obj_stateText)
+stateText.str = "Quit";

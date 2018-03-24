@@ -176,7 +176,6 @@ if (browser_width != width || browser_height != height)
     height = min(base_height, browser_height);
     scr_scaleCanvas(base_width, base_height, width, height, true);
     }
-
 </string>
           </argument>
         </arguments>
