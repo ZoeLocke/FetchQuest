@@ -59,6 +59,39 @@ height = base_height;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Build state buttons
+if(room = rm_main){
+    
+    with(instance_create(2400, 94, obj_stateButton)){
+        target = "Restart";
+        instance_create(x, y, obj_stateText);
+    };
+    
+     with(instance_create(2400, 192, obj_stateButton)){
+        target = "Quit";
+        instance_create(x, y, obj_stateText);
+    };
+};
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="2">
       <action>
@@ -199,21 +232,21 @@ if (browser_width != width || browser_height != height)
             <string>///Functionality for clicking buttons
 
 if(mouse_check_button_released(mb_left)){
-    stateButton = instance_position(mouse_x, mouse_y, obj_stateButton);
+
     choiceButton = instance_position(mouse_x, mouse_y, obj_choiceButton);
-    
     if(choiceButton != noone){
         choiceButton.y += 8;
         target = choiceButton.target;
         alarm_set(0,2);
     };
     
+    stateButton = instance_position(mouse_x, mouse_y, obj_stateButton);
     if(stateButton != noone){
         stateButton.y += 8;
-        target = stateButton.target
+        target = stateButton.target;
         alarm_set(2,2);
     };
-};  
+};
 </string>
           </argument>
         </arguments>

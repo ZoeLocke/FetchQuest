@@ -28,7 +28,7 @@
             <string>///Initialise settings
 image_speed = 0;
 image_index = 1;
-str = "test";
+str = "";
 depth = -1000;
 </string>
           </argument>
@@ -61,7 +61,7 @@ draw_set_font(fnt_testFont);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-draw_text(parentButton.x, parentButton.y, str);
+draw_text(parentButton.x, parentButton.y, parentButton.target);
 </string>
           </argument>
         </arguments>
