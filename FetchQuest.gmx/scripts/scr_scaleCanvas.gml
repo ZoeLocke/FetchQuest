@@ -1,4 +1,4 @@
-/// scr_scaleCanvas(base width, base height, current width, current height, center);
+/// scale_canvas(base width, base height, current width, current height, center);
 //argument0 = base width;
 //argument1 = base height;
 //argument2 = current width
