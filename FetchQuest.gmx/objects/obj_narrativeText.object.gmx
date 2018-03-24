@@ -29,8 +29,7 @@
 var str = "";
 image_speed = 0;
 image_index = 1;
-textX = 0;
-textY = 0;
+
 </string>
           </argument>
         </arguments>
@@ -54,11 +53,17 @@ textY = 0;
           <argument>
             <kind>1</kind>
             <string>///Draw text
+
+
+
+var parentContainer = instance_position(x, y, obj_container);
+
 draw_set_colour(c_black);
 draw_set_font(fnt_testFont);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
-draw_text_ext(textX, textY, str, -1, 704);
+
+draw_text_ext(parentContainer.x, parentContainer.y, str, -1, 768);
 </string>
           </argument>
         </arguments>

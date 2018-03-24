@@ -17,8 +17,6 @@ file_text_close(file);
 
 var narrativeText = instance_create(320, 64, obj_narrativeText);
 narrativeText.str = str;
-narrativeText.textX = 320;
-narrativeText.textY = 96;
 
 //Update choice buttons
 var i;
