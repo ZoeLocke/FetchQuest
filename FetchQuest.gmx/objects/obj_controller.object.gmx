@@ -25,10 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Configure variables
+            <string>///Configure variables and launch controller script
 global.page = "homeInterior"
 target = "homeInterior";
-
+if(room == rm_main) script_execute(scr_controller);
 </string>
           </argument>
         </arguments>
@@ -60,6 +60,31 @@ height = base_height;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Reset button and start timer to move to new screen
+stateButton.y -= 8;
+alarm_set(1, 2);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
@@ -80,6 +105,11 @@ height = base_height;
             <string>///Change page variable and return controller script
 if(room == rm_startScreen){
     room_goto(rm_main);
+} else if(target = "Restart"){
+    global.page = "homeInterior";
+    script_execute(scr_controller)
+} else if(target = "Quit"){
+    room_goto(rm_startScreen);
 } else {
     global.page = target;
     script_execute(scr_controller)
@@ -110,7 +140,7 @@ if(room == rm_startScreen){
           <argument>
             <kind>1</kind>
             <string>///Reset button and start timer to move to new screen
-clickID.y -= 8;
+choiceButton.y -= 8;
 alarm_set(1, 2);
 </string>
           </argument>
@@ -134,10 +164,10 @@ alarm_set(1, 2);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///DISABLED - Scale canvas
-/*
+            <string>///Scale canvas
 
-DISABLED AS IT WAS CAUSING PROBLEMS ON SMALLER SCREENS
+
+//DISABLED AS IT WAS CAUSING PROBLEMS ON SMALLER SCREENS
 
 ///Scale canvas
 if (browser_width != width || browser_height != height)
@@ -146,7 +176,7 @@ if (browser_width != width || browser_height != height)
     height = min(base_height, browser_height);
     scr_scaleCanvas(base_width, base_height, width, height, true);
     }
-    */
+    
 </string>
           </argument>
         </arguments>
@@ -170,15 +200,21 @@ if (browser_width != width || browser_height != height)
             <string>///Functionality for clicking buttons
 
 if(mouse_check_button_released(mb_left)){
-    clickID = instance_position(mouse_x,mouse_y,obj_choiceButton);
-    if(clickID != noone){
-        with(clickID){
-            y += 8;
-        }
-        target = clickID.target;
+    stateButton = instance_position(mouse_x, mouse_y, obj_stateButton);
+    choiceButton = instance_position(mouse_x, mouse_y, obj_choiceButton);
+    
+    if(choiceButton != noone){
+        choiceButton.y += 8;
+        target = choiceButton.target;
         alarm_set(0,2);
-    }
-}
+    };
+    
+    if(stateButton != noone){
+        stateButton.y += 8;
+        target = stateButton.target
+        alarm_set(2,2);
+    };
+};  
 </string>
           </argument>
         </arguments>

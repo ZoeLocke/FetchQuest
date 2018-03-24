@@ -4,6 +4,8 @@
 instance_destroy(obj_choiceButton);
 instance_destroy(obj_narrativeText);
 instance_destroy(obj_choiceText);
+instance_destroy(obj_stateButton);
+instance_destroy(obj_stateText);
 
 var page = global.page;
 var str = "";
@@ -48,3 +50,21 @@ with(obj_image){
     image_index = img;
 };
 ini_close();
+
+
+//Rebuild state buttons
+var stateButton;
+stateButton = instance_create(1808, 64, obj_stateButton);
+stateButton.target = "Restart";
+
+stateButton = instance_create(1808, 160, obj_stateButton);
+stateButton.target = "Quit"
+
+var stateLabel;
+
+stateLabel = instance_create(1808, 64, obj_stateText);
+stateLabel.str = "Restart";
+
+stateLabel = instance_create(1808, 160, obj_stateText);
+stateLabel.str = "Quit";
+

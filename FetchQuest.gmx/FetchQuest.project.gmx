@@ -103,6 +103,7 @@
       <sprite>sprites\spr_container</sprite>
       <sprite>sprites\spr_button</sprite>
       <sprite>sprites\spr_image</sprite>
+      <sprite>sprites\spr_stateButton</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -111,8 +112,6 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_scaleCanvas.gml</script>
-    <script>scripts\scr_narrativeText.gml</script>
-    <script>scripts\scr_choiceButtons.gml</script>
     <script>scripts\scr_controller.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -129,6 +128,8 @@
       <object>objects\obj_choiceButton</object>
       <object>objects\obj_choiceText</object>
       <object>objects\obj_image</object>
+      <object>objects\obj_stateButton</object>
+      <object>objects\obj_stateText</object>
     </objects>
   </objects>
   <rooms name="rooms">
