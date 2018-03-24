@@ -28,8 +28,8 @@
             <string>///Initialise settings
 image_speed = 0;
 image_index = 1;
-str = "";
 depth = -1000;
+
 </string>
           </argument>
         </arguments>
@@ -58,7 +58,11 @@ draw_set_font(fnt_testFont);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
+var str = ds_grid_get(global.inventory, 1, 0);
+
 draw_text(x, y, str);
+
+
 </string>
           </argument>
         </arguments>

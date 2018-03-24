@@ -51,11 +51,11 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_container" x="320" y="64" name="inst_1924838E" locked="0" code="" scaleX="26" scaleY="22" colour="4294967295" rotation="0"/>
-    <instance objName="obj_container" x="1216" y="832" name="inst_2B310139" locked="0" code="" scaleX="32" scaleY="17" colour="4294967295" rotation="0"/>
+    <instance objName="obj_textContainer" x="320" y="64" name="inst_1924838E" locked="0" code="" scaleX="26" scaleY="22" colour="4294967295" rotation="0"/>
     <instance objName="obj_controller" x="32" y="32" name="inst_6D45E594" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_image" x="1216" y="64" name="inst_E21DEAA2" locked="0" code="" scaleX="1.27999997138977" scaleY="1.29411768913269" colour="4294967295" rotation="0"/>
+    <instance objName="obj_image" x="1248" y="64" name="inst_E21DEAA2" locked="0" code="" scaleX="1.2415519952774" scaleY="1.29650092124939" colour="4294967295" rotation="0"/>
     <instance objName="obj_bugFixText" x="2272" y="864" name="inst_33E7A396" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_invContainer" x="1248" y="864" name="inst_288C454E" locked="0" code="" scaleX="31" scaleY="17" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

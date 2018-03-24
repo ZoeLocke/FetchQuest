@@ -26,7 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>///initialise button settings
-buttonNumber = 0;
+target = "NOTHING";
+inventoryGet = "NOTHING";
+inventoryNeed = "NOTHING";
+inventoryMissingTarget = "NOTHING";
+inventoryItemDestroy = "NOTHING";
 
 </string>
           </argument>
