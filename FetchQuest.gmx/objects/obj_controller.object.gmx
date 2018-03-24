@@ -51,10 +51,12 @@ if(room == rm_main) script_execute(scr_controller);
             <kind>1</kind>
             <string>///Set screen display
 
+/*
 base_width = room_width;
 base_height = room_height;
 width = base_width;
 height = base_height;
+*/
 </string>
           </argument>
         </arguments>
@@ -170,13 +172,14 @@ alarm_set(1, 2);
 //DISABLED AS IT WAS CAUSING PROBLEMS ON SMALLER SCREENS
 
 ///Scale canvas
+/*
 if (browser_width != width || browser_height != height)
     {
     width = min(base_width, browser_width);
     height = min(base_height, browser_height);
     scr_scaleCanvas(base_width, base_height, width, height, true);
     }
-    
+*/
 </string>
           </argument>
         </arguments>
