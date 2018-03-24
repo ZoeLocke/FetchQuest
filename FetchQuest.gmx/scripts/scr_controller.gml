@@ -29,6 +29,13 @@ for(i = 0; i < 5; i++){
         var textX = 736;
         var textY = 864 + (i * 128);
         
+        var choiceButton = instance_create(textX, textY, obj_choiceButton);
+        var choiceText = instance_create(textX, textY, obj_choiceText);
+        
+        choiceButton.target = ini_read_string(page + "Targets", choice, "");
+        choiceText.str = ini_read_string(page + "Choices", choice, "");
+        
+        /*
         with(instance_create(textX, textY, obj_choiceButton)){
         
         var str = ini_read_string(page + "Choices", choice, "");
@@ -38,6 +45,7 @@ for(i = 0; i < 5; i++){
         var choiceText = instance_create(textX, textY, obj_choiceText);
         choiceText.str = str;
         };
+        */
     }
     ini_close();
 }
