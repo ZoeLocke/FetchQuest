@@ -26,7 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///initialise button settings
-target = "startPage";
+buttonNumber = 0;
+
 </string>
           </argument>
         </arguments>
