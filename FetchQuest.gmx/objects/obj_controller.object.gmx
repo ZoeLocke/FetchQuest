@@ -180,6 +180,7 @@ if (browser_width != width || browser_height != height)
     scr_scaleCanvas(base_width, base_height, width, height, true);
     }
 */
+
 </string>
           </argument>
         </arguments>
