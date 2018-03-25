@@ -31,7 +31,7 @@ global.shadowOffset = 8;
 global.buttonPressDepth = 8;
 
 if(room == rm_main){
-    
+    //Build state buttons
     with(instance_create(2400, 94, obj_stateButton)){
         target = "Quit";
         
@@ -41,16 +41,72 @@ if(room == rm_main){
         instance_create(x, y, obj_stateText);
     };
     
+    //Build text container
     with(instance_create(320, 64, obj_textContainer)){
         var shadow = instance_create(x - global.shadowOffset, y + global.shadowOffset, obj_textContainerShadow);
         shadow.image_xscale = global.shadowScale;
     };
     
+    //build inv container
     with(instance_create(1248, 832, obj_invContainer)){
         var shadow = instance_create(x - global.shadowOffset, y + global.shadowOffset, obj_invContainerShadow);
         shadow.image_xscale = global.shadowScale;
+        
+        //Build items
+        var i;
+        var j;
+        var itemNumber = 0;
+        
+        //Loop through a function to create a row of items twice, creating 2 rows
+        for(i = 0; i &lt; 2; i++){
+            for(j = 0; j &lt; 4; j++){
+                var itemY;
+                var itemX;
+                var itemRef;
+                
+                //I'd prefer to build the reference programatically as a string, but it doesn't seem to be working
+                switch(itemNumber){
+                    case 0: itemRef = obj_item0;
+                    break;
+                    
+                    case 1: itemRef = obj_item1;
+                    break;
+                    
+                    case 2: itemRef = obj_item2;
+                    break;
+                    
+                    case 3: itemRef = obj_item3;
+                    break;
+                    
+                    case 4: itemRef = obj_item4;
+                    break;
+                    
+                    case 5: itemRef = obj_item5;
+                    break;
+                    
+                    case 6: itemRef = obj_item6;
+                    break;
+                    
+                    case 7: itemRef = obj_item7;
+                    break;
+                };
+            
+                if(i == 0){itemY = obj_invContainer.y + 64}else{itemY = obj_invContainer.y + 304};
+                itemX = obj_invContainer.x + 64 + (244 * j);
+                
+                with(itemObject = instance_create(itemX, itemY, itemRef)){
+                    
+                    //Set the object to inactive by default, it'll be switched on by the scr_controller if an item has been found
+                    //instance_deactivate_object(itemObject);
+                };
+                
+                //Iterate the item number
+                itemNumber++;
+            };
+        };
     };
     
+    //Build image container
     with(instance_create(1248, 64, obj_imageContainer)){
         var image = instance_create(x + 6, y + 6, obj_image);
         image.image_xscale = 0.99;
@@ -461,7 +517,17 @@ if(keyboard_check_released(vk_anykey)){
 
 //---Tooltips on inventory items---
 var invItem;
-invItem = instance_position(mouse_x, mouse_y, obj_item);
+
+//I'd prefer to build the reference programatically as a string, but it doesn't seem to be working
+if(instance_position(mouse_x, mouse_y, obj_item0)!= noone){invItem = instance_position(mouse_x, mouse_y, obj_item0)}        
+else if(instance_position(mouse_x, mouse_y, obj_item1)!= noone){invItem = instance_position(mouse_x, mouse_y, obj_item1)} 
+else if(instance_position(mouse_x, mouse_y, obj_item2)!= noone){invItem = instance_position(mouse_x, mouse_y, obj_item2)} 
+else if(instance_position(mouse_x, mouse_y, obj_item3)!= noone){invItem = instance_position(mouse_x, mouse_y, obj_item3)} 
+else if(instance_position(mouse_x, mouse_y, obj_item4)!= noone){invItem = instance_position(mouse_x, mouse_y, obj_item4)} 
+else if(instance_position(mouse_x, mouse_y, obj_item5)!= noone){invItem = instance_position(mouse_x, mouse_y, obj_item5)} 
+else if(instance_position(mouse_x, mouse_y, obj_item6)!= noone){invItem = instance_position(mouse_x, mouse_y, obj_item6)} 
+else if(instance_position(mouse_x, mouse_y, obj_item7)!= noone){invItem = instance_position(mouse_x, mouse_y, obj_item7)}            
+else{invItem = noone};
 
 if(invItem != noone){
 var tooltipPart;
@@ -469,12 +535,12 @@ var tooltipPart;
     if(!instance_exists(obj_tooltipContainer)){    
         with(instance_create(mouse_x, mouse_y, obj_tooltipContainer)){
             if(!instance_exists(obj_tooltipTitle)){
-                tooltipPart = instance_create(x, y, obj_tooltipTitle);
-                tooltipPart.str = ds_grid_get(global.inventory, 1, 0);
+                tooltipPart = instance_create(x, y, obj_tooltipTitle);      
+                tooltipPart.str = ds_grid_get(global.inventory, 1, invItem.itemNumber);
             };
             if(!instance_exists(obj_tooltipText)){
                 tooltipPart = instance_create(x , y, obj_tooltipText);
-                tooltipPart.str = ds_grid_get(global.inventory, 4, 0);
+                tooltipPart.str = ds_grid_get(global.inventory, 4, invItem.itemNumber);
             };
             if(!instance_exists(obj_tooltipContainerShadow)){
                 tooltipPart = instance_create(x - global.shadowOffset, y + global.shadowOffset, obj_tooltipContainerShadow);

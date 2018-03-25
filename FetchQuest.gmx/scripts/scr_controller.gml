@@ -20,7 +20,7 @@ if(page == "intro"){
     if(instance_exists(obj_choiceButton)) instance_destroy(obj_choiceButton);
     if(instance_exists(obj_narrativeText)) instance_destroy(obj_narrativeText);
     if(instance_exists(obj_choiceText)) instance_destroy(obj_choiceText);
-    if(instance_exists(obj_item)) instance_destroy(obj_item);
+    //if(instance_exists(obj_item)) instance_destroy(obj_item);
     if(instance_exists(obj_choiceButtonShadow)) instance_destroy(obj_choiceButtonShadow);
     
     //---Update narrative text---
@@ -33,7 +33,7 @@ if(page == "intro"){
     //Create narrative text
     var narrativeText = instance_create(320, 64, obj_narrativeText);
     narrativeText.str = str;
-    
+/*    
     //---Update inventory display---
     var i;
     var countOwnedItems = 0;
@@ -57,7 +57,7 @@ if(page == "intro"){
             countOwnedItems++;
         };
     };
-    
+*/   
     //---Update choice buttons---
     var k;
     for(k = 0; k < 5; k++){

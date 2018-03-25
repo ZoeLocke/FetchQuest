@@ -121,13 +121,14 @@
         <sprite>sprites\spr_tooltip_ContainerShadow</sprite>
       </sprites>
       <sprites name="Items">
-        <sprite>sprites\spr_bone</sprite>
-        <sprite>sprites\spr_collar</sprite>
-        <sprite>sprites\spr_newspaper</sprite>
-        <sprite>sprites\spr_dogFood</sprite>
-        <sprite>sprites\spr_dogFoodOpen</sprite>
-        <sprite>sprites\spr_stick</sprite>
-        <sprite>sprites\spr_aidKit</sprite>
+        <sprite>sprites\spr_item0</sprite>
+        <sprite>sprites\spr_item1</sprite>
+        <sprite>sprites\spr_item2</sprite>
+        <sprite>sprites\spr_item3</sprite>
+        <sprite>sprites\spr_item4</sprite>
+        <sprite>sprites\spr_item5</sprite>
+        <sprite>sprites\spr_item6</sprite>
+        <sprite>sprites\spr_item7</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -179,7 +180,14 @@
         <object>objects\obj_tooltipText</object>
         <object>objects\obj_tooltipContainer</object>
         <object>objects\obj_invContainer</object>
-        <object>objects\obj_item</object>
+        <object>objects\obj_item0</object>
+        <object>objects\obj_item1</object>
+        <object>objects\obj_item2</object>
+        <object>objects\obj_item3</object>
+        <object>objects\obj_item4</object>
+        <object>objects\obj_item5</object>
+        <object>objects\obj_item6</object>
+        <object>objects\obj_item7</object>
         <object>objects\obj_invContainerShadow</object>
         <object>objects\obj_tooltipContainerShadow</object>
       </objects>

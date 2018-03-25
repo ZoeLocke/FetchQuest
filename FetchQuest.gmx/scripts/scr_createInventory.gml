@@ -29,20 +29,26 @@ ds_grid_set(global.inventory, 2,  3, 0);
 ds_grid_set(global.inventory, 3,  3, 0);
 ds_grid_set(global.inventory, 4,  3, "TEXT");
 
-ds_grid_set(global.inventory, 0,  4, "stick");
-ds_grid_set(global.inventory, 1,  4, "Stick");
+ds_grid_set(global.inventory, 0,  4, "dogFoodOpen");
+ds_grid_set(global.inventory, 1,  4, "Dog Food Open");
 ds_grid_set(global.inventory, 2,  4, 0);
 ds_grid_set(global.inventory, 3,  4, 0);
 ds_grid_set(global.inventory, 4,  4, "TEXT");
 
-ds_grid_set(global.inventory, 0,  5, "aidKit");
-ds_grid_set(global.inventory, 1,  5, "First Aid Kit");
+ds_grid_set(global.inventory, 0,  5, "stick");
+ds_grid_set(global.inventory, 1,  5, "Stick");
 ds_grid_set(global.inventory, 2,  5, 0);
 ds_grid_set(global.inventory, 3,  5, 0);
 ds_grid_set(global.inventory, 4,  5, "TEXT");
 
-ds_grid_set(global.inventory, 0,  6, "dogFoodOpen");
-ds_grid_set(global.inventory, 1,  6, "Dog Food Open");
+ds_grid_set(global.inventory, 0,  6, "aidKit");
+ds_grid_set(global.inventory, 1,  6, "First Aid Kit");
 ds_grid_set(global.inventory, 2,  6, 0);
 ds_grid_set(global.inventory, 3,  6, 0);
 ds_grid_set(global.inventory, 4,  6, "TEXT");
+
+ds_grid_set(global.inventory, 0,  7, "NOTHING");
+ds_grid_set(global.inventory, 1,  7, "NOTHING");
+ds_grid_set(global.inventory, 2,  7, 0);
+ds_grid_set(global.inventory, 3,  7, 0);
+ds_grid_set(global.inventory, 4,  7, "TEXT");
