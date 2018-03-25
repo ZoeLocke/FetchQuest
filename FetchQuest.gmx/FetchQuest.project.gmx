@@ -98,18 +98,32 @@
       <sprite>sprites\spr_textIcon</sprite>
     </sprites>
     <sprites name="Game Sprites">
-      <sprite>sprites\spr_textContainer</sprite>
-      <sprite>sprites\spr_invContainer</sprite>
-      <sprite>sprites\spr_choiceButton</sprite>
-      <sprite>sprites\spr_startButton</sprite>
       <sprite>sprites\spr_image</sprite>
-      <sprite>sprites\spr_stateButton</sprite>
-      <sprite>sprites\spr_item</sprite>
-      <sprite>sprites\spr_tooltip</sprite>
+      <sprites name="Containers">
+        <sprite>sprites\spr_invContainer</sprite>
+        <sprite>sprites\spr_textContainer</sprite>
+        <sprite>sprites\spr_tooltip</sprite>
+      </sprites>
+      <sprites name="Buttons">
+        <sprite>sprites\spr_choiceButton</sprite>
+        <sprite>sprites\spr_stateButton</sprite>
+        <sprite>sprites\spr_startButton</sprite>
+      </sprites>
+      <sprites name="Shadows">
+        <sprite>sprites\spr_startButtonShadow</sprite>
+        <sprite>sprites\spr_stateButtonShadow</sprite>
+        <sprite>sprites\spr_choiceButtonShadow</sprite>
+        <sprite>sprites\spr_invContainerShadow</sprite>
+        <sprite>sprites\spr_textContainerShadow</sprite>
+      </sprites>
+      <sprites name="Items">
+        <sprite>sprites\spr_item</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_displayMap</background>
+    <background>background\bg_mainBackground</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -126,21 +140,41 @@
       <object>objects\obj_bugFixText</object>
     </objects>
     <objects name="Game Objects">
-      <object>objects\obj_textContainer</object>
-      <object>objects\obj_invContainer</object>
-      <object>objects\obj_narrativeText</object>
-      <object>objects\obj_titleText</object>
-      <object>objects\obj_choiceButton</object>
-      <object>objects\obj_choiceText</object>
-      <object>objects\obj_image</object>
-      <object>objects\obj_stateButton</object>
-      <object>objects\obj_stateText</object>
-      <object>objects\obj_item</object>
-      <object>objects\obj_tooltipContainer</object>
-      <object>objects\obj_tooltipTitle</object>
-      <object>objects\obj_tooltipText</object>
-      <object>objects\obj_introText</object>
-      <object>objects\obj_startButton</object>
+      <objects name="GameText">
+        <object>objects\obj_narrativeText</object>
+        <object>objects\obj_textContainer</object>
+        <object>objects\obj_textContainerShadow</object>
+      </objects>
+      <objects name="ChoiceButtons">
+        <object>objects\obj_choiceText</object>
+        <object>objects\obj_choiceButton</object>
+        <object>objects\obj_choiceButtonShadow</object>
+      </objects>
+      <objects name="StartButton">
+        <object>objects\obj_startButtonShadow</object>
+        <object>objects\obj_startButton</object>
+        <object>objects\obj_startText</object>
+      </objects>
+      <objects name="StateButtons">
+        <object>objects\obj_stateText</object>
+        <object>objects\obj_stateButton</object>
+        <object>objects\obj_stateButtonShadow</object>
+      </objects>
+      <objects name="Inv">
+        <object>objects\obj_tooltipTitle</object>
+        <object>objects\obj_tooltipText</object>
+        <object>objects\obj_tooltipContainer</object>
+        <object>objects\obj_invContainer</object>
+        <object>objects\obj_item</object>
+        <object>objects\obj_invContainerShadow</object>
+      </objects>
+      <objects name="Images">
+        <object>objects\obj_image</object>
+      </objects>
+      <objects name="OtherTexts">
+        <object>objects\obj_introText</object>
+        <object>objects\obj_titleText</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

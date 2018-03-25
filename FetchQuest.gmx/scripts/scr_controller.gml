@@ -21,6 +21,7 @@ if(page == "intro"){
     if(instance_exists(obj_narrativeText)) instance_destroy(obj_narrativeText);
     if(instance_exists(obj_choiceText)) instance_destroy(obj_choiceText);
     if(instance_exists(obj_item)) instance_destroy(obj_item);
+    if(instance_exists(obj_choiceButtonShadow)) instance_destroy(obj_choiceButtonShadow);
     
     //---Update narrative text---
     //Loop through text file to create full narrative text strig (including carriage returns)
@@ -63,19 +64,33 @@ if(page == "intro"){
         ini_open(working_directory + "choices.ini");
         
         //If current choice is not empty build its button
-        if(ini_read_string(page + "Choices", k, "") != "NOTHING"){          
+        //if(ini_read_string(page + "Choices", k, "") != "NOTHING"){          
+            
             //Set variables
             var textX = 736;
-            var textY = 864 + (k * 128);
+            var textY = 864 + (k * 128);    
             
-            //Create button and text
-            var choiceButton = instance_create(textX, textY, obj_choiceButton);
+            //Create text 
             var choiceText = instance_create(textX, textY, obj_choiceText);
+            choiceText.str = ini_read_string(page + "Choices", k, "");  
             
-            //Set button and text values
-            choiceButton.buttonNumber = k;
-            choiceText.str = ini_read_string(page + "Choices", k, "");    
-        };
+            //Create buttons
+            var choiceButton = instance_create(textX, textY, obj_choiceButton);
+            var choiceShadow = instance_create(textX, textY + global.shadowOffset, obj_choiceButtonShadow);
+            
+            choiceButton.image_index = k;
+            choiceShadow.image_index = k;
+            choiceShadow.image_xscale = global.shadowScale;
+            
+            
+            if(choiceText.str == "NOTHING"){
+                instance_deactivate_object(choiceButton);
+                instance_deactivate_object(choiceShadow);
+                instance_deactivate_object(choiceText);
+            };
+            
+              
+        //};
         
         //Update button controls array with values for each button
         choiceButton.buttonNumber = k;

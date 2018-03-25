@@ -25,6 +25,71 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Build static UI elements
+global.shadowScale = 1.02;
+global.shadowOffset = 8;
+global.buttonPressDepth = 8;
+
+if(room == rm_main){
+    
+    with(instance_create(2400, 94, obj_stateButton)){
+        target = "Quit";
+        
+        var shadow = instance_create(x, y + global.shadowOffset, obj_stateButtonShadow);
+        shadow.image_xscale = global.shadowScale;
+        
+        instance_create(x, y, obj_stateText);
+    };
+    
+    with(instance_create(320, 64, obj_textContainer)){
+        var shadow = instance_create(x - global.shadowOffset, y + global.shadowOffset, obj_textContainerShadow);
+        shadow.image_xscale = global.shadowScale;
+    };
+    
+    with(instance_create(1248, 832, obj_invContainer)){
+        var shadow = instance_create(x - global.shadowOffset, y + global.shadowOffset, obj_invContainerShadow);
+        shadow.image_xscale = global.shadowScale;
+    };
+    
+    with(instance_create(1248, 64, obj_image)){
+        //var shadow = instance_create(x, y + 16, obj_textContainerShadow);
+        //shadow.image_xscale = global.shadowScale;
+    };
+    
+};
+
+//Build start button
+if(room == rm_startScreen){
+    with(instance_create(room_width / 2, room_height / 2, obj_startButton)){
+        
+        var shadow = instance_create(x, y + global.shadowOffset, obj_startButtonShadow);
+        shadow.image_xscale = global.shadowScale;
+        
+        var text = instance_create(x, y, obj_startText);
+        text.str = "START";
+    };
+
+};
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Configure variables and launch controller scripts
 
 //---Define variables for running button press functions---
@@ -105,47 +170,6 @@ height = base_height;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Build state buttons
-if(room == rm_main){
-    
-    with(instance_create(2400, 94, obj_stateButton)){
-        target = "Quit";
-        instance_create(x, y, obj_stateText);
-    };
-    
-};
-
-//Build start button
-if(room == rm_startScreen){
-    with(instance_create(room_width / 2, room_height / 2, obj_startButton)){
-        
-        instance_create(room_width / 2, room_height / 2, obj_choiceButton);
-        var text = instance_create(x, y, obj_choiceText);
-        text.str = "START";
-        
-    };
-
-};
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///Set timer to move to next screen
 if(room == rm_intro) alarm_set(3,120);
 </string>
@@ -171,7 +195,8 @@ if(room == rm_intro) alarm_set(3,120);
           <argument>
             <kind>1</kind>
             <string>///Reset button and start timer to move to new screen
-startButton.y -= 8;
+startButton.y -= global.buttonPressDepth;
+startShadow.image_xscale = global.shadowScale;
 alarm_set(1, 2);
 </string>
           </argument>
@@ -220,7 +245,8 @@ room_goto(rm_main);
           <argument>
             <kind>1</kind>
             <string>///Reset button and start timer to move to new screen
-stateButton.y -= 8;
+stateButton.y -= global.buttonPressDepth;
+stateShadow.image_xscale = global.shadowScale;
 alarm_set(1, 2);
 </string>
           </argument>
@@ -312,7 +338,8 @@ if(room == rm_startScreen){
           <argument>
             <kind>1</kind>
             <string>///Reset button and start timer to move to new screen
-choiceButton.y -= 8;
+choiceButton.y -= global.buttonPressDepth;
+choiceShadow.image_xscale = global.shadowScale;
 alarm_set(1, 2);
 </string>
           </argument>
@@ -375,7 +402,7 @@ if(mouse_check_button_released(mb_left)){
 
     choiceButton = instance_position(mouse_x, mouse_y, obj_choiceButton);
     if(choiceButton != noone){
-        choiceButton.y += 8;
+        choiceButton.y += global.buttonPressDepth;
         
         target = choiceButton.target;
         inventoryGet = choiceButton.inventoryGet;
@@ -383,19 +410,30 @@ if(mouse_check_button_released(mb_left)){
         inventoryMissingTarget = choiceButton.inventoryMissingTarget;
         inventoryDestroy = choiceButton.inventoryDestroy;
         
+        choiceShadow = instance_position(choiceButton.x, choiceButton.y, obj_choiceButtonShadow);
+        choiceShadow.image_xscale = 1;
+        
         alarm_set(0,2);
     };
     
     stateButton = instance_position(mouse_x, mouse_y, obj_stateButton);
     if(stateButton != noone){
-        stateButton.y += 8;
+        stateButton.y += global.buttonPressDepth;
         target = stateButton.target;
+        
+        stateShadow = instance_position(stateButton.x, stateButton.y, obj_stateButtonShadow);
+        stateShadow.image_xscale = 1;
+              
         alarm_set(2,2);
     };
     
     startButton = instance_position(mouse_x, mouse_y, obj_startButton);
     if(startButton != noone){
-        startButton.y += 8;
+        startButton.y += global.buttonPressDepth;
+        
+        startShadow = instance_position(startButton.x, startButton.y, obj_startButtonShadow);
+        startShadow.image_xscale = 1;
+        
         alarm_set(4,2);
     };
     
