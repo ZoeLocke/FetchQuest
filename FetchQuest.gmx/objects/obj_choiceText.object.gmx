@@ -56,7 +56,7 @@ depth = -1000;
 var parentButton = instance_position(x, y, obj_choiceButton);
 
 
-draw_set_colour(c_black);
+draw_set_colour(c_white);
 draw_set_font(fnt_testFont);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);

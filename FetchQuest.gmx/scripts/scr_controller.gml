@@ -78,6 +78,7 @@ if(page == "intro"){
         };
         
         //Update button controls array with values for each button
+        choiceButton.buttonNumber = k;
         choiceButton.target = ini_read_string(page + "Targets", k, "");
         choiceButton.inventoryGet = ini_read_string(page + "InventoryGet", k, "");
         choiceButton.inventoryNeed = ini_read_string(page + "InventoryNeed", k, "");

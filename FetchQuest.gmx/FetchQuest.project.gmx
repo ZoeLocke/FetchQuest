@@ -99,7 +99,8 @@
     </sprites>
     <sprites name="Game Sprites">
       <sprite>sprites\spr_container</sprite>
-      <sprite>sprites\spr_button</sprite>
+      <sprite>sprites\spr_choiceButton</sprite>
+      <sprite>sprites\spr_startButton</sprite>
       <sprite>sprites\spr_image</sprite>
       <sprite>sprites\spr_stateButton</sprite>
       <sprite>sprites\spr_item</sprite>
@@ -138,12 +139,13 @@
       <object>objects\obj_tooltipTitle</object>
       <object>objects\obj_tooltipText</object>
       <object>objects\obj_introText</object>
+      <object>objects\obj_startButton</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_startScreen</room>
-    <room>rooms\rm_main</room>
     <room>rooms\rm_intro</room>
+    <room>rooms\rm_main</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
