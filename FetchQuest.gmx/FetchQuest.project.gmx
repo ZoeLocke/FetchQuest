@@ -117,6 +117,7 @@
         <sprite>sprites\spr_invContainerShadow</sprite>
         <sprite>sprites\spr_textContainerShadow</sprite>
         <sprite>sprites\spr_imageContainerShadow</sprite>
+        <sprite>sprites\spr_tooltip_ContainerShadow</sprite>
       </sprites>
       <sprites name="Items">
         <sprite>sprites\spr_item</sprite>
@@ -125,7 +126,8 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bg_displayMap</background>
-    <background>background\bg_mainBackground</background>
+    <background>background\bg_startBackground</background>
+    <background>background\bg_main_background</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -169,6 +171,7 @@
         <object>objects\obj_invContainer</object>
         <object>objects\obj_item</object>
         <object>objects\obj_invContainerShadow</object>
+        <object>objects\obj_tooltipContainerShadow</object>
       </objects>
       <objects name="Images">
         <object>objects\obj_image</object>

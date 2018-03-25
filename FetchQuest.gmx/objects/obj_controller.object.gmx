@@ -465,8 +465,11 @@ var tooltipPart;
                 tooltipPart.str = ds_grid_get(global.inventory, 0, 0);
             };
             if(!instance_exists(obj_tooltipText)){
-                tooltipPart = instance_create(x, y, obj_tooltipText);
+                tooltipPart = instance_create(x , y, obj_tooltipText);
                 tooltipPart.str = ds_grid_get(global.inventory, 3, 0);
+            };
+            if(!instance_exists(obj_tooltipContainerShadow)){
+                tooltipPart = instance_create(x - global.shadowOffset, y + global.shadowOffset, obj_tooltipContainerShadow);
             };
         };
     };
@@ -476,6 +479,7 @@ var tooltipPart;
     instance_destroy(obj_tooltipContainer);
     instance_destroy(obj_tooltipTitle);
     instance_destroy(obj_tooltipText);
+    instance_destroy(obj_tooltipContainerShadow);
 };
 </string>
           </argument>

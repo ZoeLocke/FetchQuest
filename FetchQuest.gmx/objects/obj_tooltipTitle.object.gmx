@@ -59,7 +59,7 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
 var parentContainer = obj_tooltipContainer;
-var drawY = parentContainer.y - parentContainer.sprite_height + 32;
+var drawY = parentContainer.y - parentContainer.sprite_height + 64;
 
 draw_text_ext(parentContainer.x, drawY, str, -1, 576);
 </string>
