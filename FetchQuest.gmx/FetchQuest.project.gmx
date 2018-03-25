@@ -137,11 +137,13 @@
       <object>objects\obj_tooltipContainer</object>
       <object>objects\obj_tooltipTitle</object>
       <object>objects\obj_tooltipText</object>
+      <object>objects\obj_introText</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_main</room>
     <room>rooms\rm_startScreen</room>
+    <room>rooms\rm_main</room>
+    <room>rooms\rm_intro</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

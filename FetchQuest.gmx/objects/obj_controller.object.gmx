@@ -28,20 +28,18 @@
             <string>///Configure variables and launch controller scripts
 
 //---Define variables for running button press functions---
-target = "homeInterior";
+if(room == rm_intro) target = "intro" else target = "homeInterior";
 inventoryGet = "NOTHING";
 inventoryNeed = "NOTHING";
 inventoryMissingTarget = "NOTHING";
 inventoryDestroy = "NOTHING";
 
-//---Run screen controller script---
-if(room == rm_main){
-    //---Run create inventory script---
-    scr_createInventory();
+//---Run create inventory script---
+if(room == rm_main) scr_createInventory();
     
-    //---Run screen controller script---
-    scr_controller(target);
-};
+//---Run controller script---
+if(room != rm_startScreen) scr_controller(target);
+
 </string>
           </argument>
         </arguments>
@@ -89,7 +87,7 @@ height = base_height;
           <argument>
             <kind>1</kind>
             <string>///Build state buttons
-if(room = rm_main){
+if(room == rm_main){
     
     with(instance_create(2400, 94, obj_stateButton)){
         target = "Quit";
@@ -97,6 +95,52 @@ if(room = rm_main){
     };
     
 };
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Set timer to move to next screen
+if(room == rm_intro) alarm_set(3,120);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Move to next room
+room_goto(rm_main);
 </string>
           </argument>
         </arguments>
@@ -146,7 +190,7 @@ alarm_set(1, 2);
             <kind>1</kind>
             <string>///Change page variable and return controller script
 if(room == rm_startScreen){
-    room_goto(rm_main);
+    room_goto(rm_intro);
 } else if(target = "Quit"){
         game_restart();
 } else {
@@ -268,8 +312,9 @@ if (browser_width != width || browser_height != height)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Functionality for clicking buttons
+            <string>///User input
 
+//---Mouse click inputs---
 if(mouse_check_button_released(mb_left)){
 
     choiceButton = instance_position(mouse_x, mouse_y, obj_choiceButton);
@@ -291,33 +336,23 @@ if(mouse_check_button_released(mb_left)){
         target = stateButton.target;
         alarm_set(2,2);
     };
+    
+    //Skip intro
+    if(room == rm_intro) room_goto(rm_main);
 };
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-///Tooltips on inventory items
+
+//---Keyboard press inputs---
+if(keyboard_check_released(vk_anykey)){
+    //Skip intro
+    if(room == rm_intro) room_goto(rm_main);
+} 
+
+//---Tooltips on inventory items---
 var invItem;
 invItem = instance_position(mouse_x, mouse_y, obj_item);
+
 if(invItem != noone){
-    var tooltipPart;
+var tooltipPart;
     
     if(!instance_exists(obj_tooltipContainer)){    
         with(instance_create(mouse_x, mouse_y, obj_tooltipContainer)){
@@ -338,7 +373,6 @@ if(invItem != noone){
     instance_destroy(obj_tooltipTitle);
     instance_destroy(obj_tooltipText);
 };
-
 </string>
           </argument>
         </arguments>
