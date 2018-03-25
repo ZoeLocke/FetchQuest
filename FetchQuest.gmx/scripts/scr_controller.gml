@@ -33,7 +33,17 @@ if(page == "intro"){
     //Create narrative text
     var narrativeText = instance_create(320, 64, obj_narrativeText);
     narrativeText.str = str;
-/*    
+    
+    //---Update inventory display---
+    //Loop through the inventory, deactivating and destroyed items
+    var i;
+    for(i = 0;i<8;i++){
+        var destroy = if(ds_grid_get(global.inventory, 2, i)  == 1 && ds_grid_get(global.inventory, 3, i) == 1)
+            
+        }
+    };
+
+/*   
     //---Update inventory display---
     var i;
     var countOwnedItems = 0;

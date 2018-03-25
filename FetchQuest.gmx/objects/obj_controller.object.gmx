@@ -94,17 +94,23 @@ if(room == rm_main){
                 if(i == 0){itemY = obj_invContainer.y + 64}else{itemY = obj_invContainer.y + 304};
                 itemX = obj_invContainer.x + 64 + (244 * j);
                 
-                with(itemObject = instance_create(itemX, itemY, itemRef)){
-                    
-                    //Set the object to inactive by default, it'll be switched on by the scr_controller if an item has been found
-                    //instance_deactivate_object(itemObject);
-                };
+                itemObject = instance_create(itemX, itemY, itemRef);
                 
                 //Iterate the item number
                 itemNumber++;
             };
-        };
+        }; 
     };
+     //Set the objects to inactive by default, it'll be switched on by the scr_controller if an item has been found   
+    instance_deactivate_object(obj_item0);
+    instance_deactivate_object(obj_item1);
+    instance_deactivate_object(obj_item2);
+    instance_deactivate_object(obj_item3);
+    instance_deactivate_object(obj_item4);
+    instance_deactivate_object(obj_item5);
+    instance_deactivate_object(obj_item6);
+    instance_deactivate_object(obj_item7);
+    
     
     //Build image container
     with(instance_create(1248, 64, obj_imageContainer)){
