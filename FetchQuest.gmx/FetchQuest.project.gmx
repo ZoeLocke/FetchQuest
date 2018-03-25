@@ -103,6 +103,7 @@
         <sprite>sprites\spr_invContainer</sprite>
         <sprite>sprites\spr_textContainer</sprite>
         <sprite>sprites\spr_tooltip</sprite>
+        <sprite>sprites\spr_imageContainer</sprite>
       </sprites>
       <sprites name="Buttons">
         <sprite>sprites\spr_choiceButton</sprite>
@@ -115,6 +116,7 @@
         <sprite>sprites\spr_choiceButtonShadow</sprite>
         <sprite>sprites\spr_invContainerShadow</sprite>
         <sprite>sprites\spr_textContainerShadow</sprite>
+        <sprite>sprites\spr_imageContainerShadow</sprite>
       </sprites>
       <sprites name="Items">
         <sprite>sprites\spr_item</sprite>
@@ -170,6 +172,8 @@
       </objects>
       <objects name="Images">
         <object>objects\obj_image</object>
+        <object>objects\obj_imageContainer</object>
+        <object>objects\obj_imageContainerShadow</object>
       </objects>
       <objects name="OtherTexts">
         <object>objects\obj_introText</object>

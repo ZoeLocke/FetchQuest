@@ -51,9 +51,13 @@ if(room == rm_main){
         shadow.image_xscale = global.shadowScale;
     };
     
-    with(instance_create(1248, 64, obj_image)){
-        //var shadow = instance_create(x, y + 16, obj_textContainerShadow);
-        //shadow.image_xscale = global.shadowScale;
+    with(instance_create(1248, 64, obj_imageContainer)){
+        var image = instance_create(x + 6, y + 6, obj_image);
+        image.image_xscale = 0.99;
+        image.image_yscale = 0.99;
+        
+        var shadow = instance_create(x - global.shadowOffset, y + global.shadowOffset, obj_imageContainerShadow);
+        shadow.image_xscale = global.shadowScale;
     };
     
 };
