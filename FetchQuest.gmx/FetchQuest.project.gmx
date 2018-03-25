@@ -98,7 +98,8 @@
       <sprite>sprites\spr_textIcon</sprite>
     </sprites>
     <sprites name="Game Sprites">
-      <sprite>sprites\spr_container</sprite>
+      <sprite>sprites\spr_textContainer</sprite>
+      <sprite>sprites\spr_invContainer</sprite>
       <sprite>sprites\spr_choiceButton</sprite>
       <sprite>sprites\spr_startButton</sprite>
       <sprite>sprites\spr_image</sprite>
