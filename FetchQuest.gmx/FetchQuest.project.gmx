@@ -121,7 +121,7 @@
         <sprite>sprites\spr_tooltip_ContainerShadow</sprite>
       </sprites>
       <sprites name="Items">
-        <sprite>sprites\spr_bone</sprite>
+        <sprite>sprites\spr_item</sprite>
       </sprites>
     </sprites>
   </sprites>
