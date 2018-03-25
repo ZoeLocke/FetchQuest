@@ -55,13 +55,13 @@ depth = -2000;
             <string>///Draw text
 
 draw_set_colour(c_black);
-draw_set_font(fnt_testFont);
+draw_set_font(fnt_body);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
 var parentContainer = obj_tooltipContainer;
 var drawX = parentContainer.x - (parentContainer.sprite_width / 2) + 48;
-var drawY = parentContainer.y - parentContainer.sprite_height + 96;
+var drawY = parentContainer.y - parentContainer.sprite_height + 128;
 
 draw_text_ext(drawX, drawY, str, -1, 576);
 </string>

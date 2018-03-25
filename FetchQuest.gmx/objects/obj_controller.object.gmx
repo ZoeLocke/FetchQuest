@@ -64,12 +64,20 @@ if(room == rm_main){
 
 //Build start button
 if(room == rm_startScreen){
-    with(instance_create(room_width / 2, room_height / 2, obj_startButton)){
+    var xPos = room_width / 2;
+    var yPos = room_height * 0.25;
+    
+    instance_create(xPos, yPos, obj_logo); 
+
+    xPos = room_width / 2;
+    yPos = room_height * 0.75;
+    
+    with(instance_create(xPos, yPos, obj_startButton)){
         
-        var shadow = instance_create(x, y + global.shadowOffset, obj_startButtonShadow);
+        var shadow = instance_create(xPos, yPos + global.shadowOffset, obj_startButtonShadow);
         shadow.image_xscale = global.shadowScale;
         
-        var text = instance_create(x, y, obj_startText);
+        var text = instance_create(xPos, yPos, obj_startText);
         text.str = "START";
     };
 

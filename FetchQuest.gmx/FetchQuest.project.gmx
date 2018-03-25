@@ -98,6 +98,7 @@
       <sprite>sprites\spr_textIcon</sprite>
     </sprites>
     <sprites name="Game Sprites">
+      <sprite>sprites\spr_logo</sprite>
       <sprite>sprites\spr_image</sprite>
       <sprites name="Containers">
         <sprite>sprites\spr_invContainer</sprite>
@@ -137,6 +138,9 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_testFont</font>
+    <font>fonts\fnt_body</font>
+    <font>fonts\fnt_title</font>
+    <font>fonts\fnt_button</font>
   </fonts>
   <objects name="objects">
     <objects name="System Objects">
@@ -177,6 +181,7 @@
         <object>objects\obj_image</object>
         <object>objects\obj_imageContainer</object>
         <object>objects\obj_imageContainerShadow</object>
+        <object>objects\obj_logo</object>
       </objects>
       <objects name="OtherTexts">
         <object>objects\obj_introText</object>

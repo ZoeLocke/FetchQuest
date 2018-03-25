@@ -57,11 +57,10 @@ var parentButton = obj_startButton;
 
 
 draw_set_colour(c_white);
-draw_set_font(fnt_testFont);
+draw_set_font(fnt_button);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-
-draw_text(parentButton.x, parentButton.y, "START");
+draw_text_transformed(parentButton.x, parentButton.y, "START", 2, 1.5, 0);
 </string>
           </argument>
         </arguments>
