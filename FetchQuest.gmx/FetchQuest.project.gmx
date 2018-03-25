@@ -121,7 +121,13 @@
         <sprite>sprites\spr_tooltip_ContainerShadow</sprite>
       </sprites>
       <sprites name="Items">
-        <sprite>sprites\spr_item</sprite>
+        <sprite>sprites\spr_bone</sprite>
+        <sprite>sprites\spr_collar</sprite>
+        <sprite>sprites\spr_newspaper</sprite>
+        <sprite>sprites\spr_dogFood</sprite>
+        <sprite>sprites\spr_dogFoodOpen</sprite>
+        <sprite>sprites\spr_stick</sprite>
+        <sprite>sprites\spr_aidKit</sprite>
       </sprites>
     </sprites>
   </sprites>

@@ -51,9 +51,9 @@ if(page == "intro"){
         };
         
         //If the item is found and has not been destroyed, draw it to the inventory container
-        if(ds_grid_get(global.inventory, 1, i) == 1 && ds_grid_get(global.inventory, 2, i) == 0){
+        if(ds_grid_get(global.inventory, 2, i) == 1 && ds_grid_get(global.inventory, 3, i) == 0){
             var item = instance_create(itemX, itemY, obj_item);
-            item.image_index = ds_grid_get(global.inventory, 4, i);  
+            item.objectKey = ds_grid_get(global.inventory, 0, i);  
             countOwnedItems++;
         };
     };

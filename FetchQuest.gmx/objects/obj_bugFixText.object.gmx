@@ -59,8 +59,8 @@ draw_set_font(fnt_testFont);
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-//var itemLocation = ds_grid_value_y(global.inventory, 0, 0, 5, ds_grid_height(global.inventory), "Favourite Bone");
-//str = ds_grid_get(global.inventory, 1, itemLocation);
+var itemLocation = ds_grid_value_y(global.inventory, 0, 0, 4, ds_grid_height(global.inventory), "bone");
+str = ds_grid_get(global.inventory, 2, itemLocation);
 
 //ini_open(working_directory + "choices.ini");
 //str = ini_read_string("homeInteriorInventoryGet", 0, "BOOP");

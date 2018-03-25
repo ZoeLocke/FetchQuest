@@ -293,10 +293,10 @@ if(room == rm_startScreen){
     if(inventoryGet != "NOTHING"){
         
         //Find item in grid by name
-        var itemLocation = ds_grid_value_y(global.inventory, 0, 0, 5, ds_grid_height(global.inventory), inventoryGet);
+        var itemLocation = ds_grid_value_y(global.inventory, 0, 0, 4, ds_grid_height(global.inventory), inventoryGet);
         
         //Set found value for that item to true
-        ds_grid_set(global.inventory, 1, itemLocation, 1);
+        ds_grid_set(global.inventory, 2, itemLocation, 1);
     };
     
     //---Check for required items---
@@ -306,7 +306,7 @@ if(room == rm_startScreen){
         var itemLocation = ds_grid_value_y(global.inventory, 0, 0, 5, ds_grid_height(global.inventory), inventoryNeed);
        
         //Set page target to missing item target
-        if(ds_grid_get(global.inventory, 1, itemLocation) == 0) target = inventoryMissingTarget; 
+        if(ds_grid_get(global.inventory, 2, itemLocation) == 0) target = inventoryMissingTarget; 
     };
     
     //---Destroy items---
@@ -316,8 +316,8 @@ if(room == rm_startScreen){
         var itemLocation = ds_grid_value_y(global.inventory, 0, 0, 5, ds_grid_height(global.inventory), inventoryDestroy);
         
         //If the item has been found (so it's not destroyed before it's used) destroy it
-        if(ds_grid_get(global.inventory, 1, itemLocation) == 1){
-            ds_grid_set(global.inventory, 2, itemLocation, 1);
+        if(ds_grid_get(global.inventory, 2, itemLocation) == 1){
+            ds_grid_set(global.inventory, 3, itemLocation, 1);
         };
     };
     
@@ -470,11 +470,11 @@ var tooltipPart;
         with(instance_create(mouse_x, mouse_y, obj_tooltipContainer)){
             if(!instance_exists(obj_tooltipTitle)){
                 tooltipPart = instance_create(x, y, obj_tooltipTitle);
-                tooltipPart.str = ds_grid_get(global.inventory, 0, 0);
+                tooltipPart.str = ds_grid_get(global.inventory, 1, 0);
             };
             if(!instance_exists(obj_tooltipText)){
                 tooltipPart = instance_create(x , y, obj_tooltipText);
-                tooltipPart.str = ds_grid_get(global.inventory, 3, 0);
+                tooltipPart.str = ds_grid_get(global.inventory, 4, 0);
             };
             if(!instance_exists(obj_tooltipContainerShadow)){
                 tooltipPart = instance_create(x - global.shadowOffset, y + global.shadowOffset, obj_tooltipContainerShadow);
