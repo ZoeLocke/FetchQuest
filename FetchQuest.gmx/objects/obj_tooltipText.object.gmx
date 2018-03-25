@@ -29,7 +29,7 @@
 var str = "";
 image_speed = 0;
 image_index = 1;
-depth = -1000;
+depth = -2000;
 </string>
           </argument>
         </arguments>
@@ -53,14 +53,17 @@ depth = -1000;
           <argument>
             <kind>1</kind>
             <string>///Draw text
-var parentContainer = instance_position(x, y, obj_textContainer);
 
 draw_set_colour(c_black);
 draw_set_font(fnt_testFont);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-draw_text_ext(parentContainer.x + 64, parentContainer.y + 32, str, -1, 704);
+var parentContainer = obj_tooltipContainer;
+var drawX = parentContainer.x - (parentContainer.sprite_width / 2) + 64;
+var drawY = parentContainer.y - parentContainer.sprite_height + 96;
+
+draw_text_ext(drawX, drawY, str, -1, 576);
 </string>
           </argument>
         </arguments>

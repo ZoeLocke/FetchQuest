@@ -27,20 +27,19 @@ for(i = 0; i < ds_grid_height(global.inventory); i++){
     var itemX;
      
     //Set variables to position item images based on how many have been found so far   
-    if(countOwnedItems < 4){itemY = obj_invContainer.y + 64 }else{itemY = obj_invContainer.y + 352};
+    if(countOwnedItems < 4){itemY = obj_invContainer.y + 128 }else{itemY = obj_invContainer.y + 416};
     if(countOwnedItems < 4){
-        itemX = obj_invContainer.x + 64 + (244 * countOwnedItems);
+        itemX = obj_invContainer.x + 128 + (244 * countOwnedItems);
     }else{
-        itemX = obj_invContainer.x + 64 + (244 * (countOwnedItems - 4));
+        itemX = obj_invContainer.x + 128 + (244 * (countOwnedItems - 4));
     };
     
     //If the item is found and has not been destroyed, draw it to the inventory container
     if(ds_grid_get(global.inventory, 1, i) == 1 && ds_grid_get(global.inventory, 2, i) == 0){
         var item = instance_create(itemX, itemY, obj_item);
-        item.image_index = i;  
+        item.image_index = ds_grid_get(global.inventory, 4, i);  
         countOwnedItems++;
     };
-    obj_bugFixText.str = countOwnedItems;
 };
 
 //---Update choice buttons---

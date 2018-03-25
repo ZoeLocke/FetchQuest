@@ -296,6 +296,53 @@ if(mouse_check_button_released(mb_left)){
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+///Tooltips on inventory items
+var invItem;
+invItem = instance_position(mouse_x, mouse_y, obj_item);
+if(invItem != noone){
+    var tooltipPart;
+    
+    if(!instance_exists(obj_tooltipContainer)){    
+        with(instance_create(mouse_x, mouse_y, obj_tooltipContainer)){
+            if(!instance_exists(obj_tooltipTitle)){
+                tooltipPart = instance_create(x, y, obj_tooltipTitle);
+                tooltipPart.str = ds_grid_get(global.inventory, 0, 0);
+            };
+            if(!instance_exists(obj_tooltipText)){
+                tooltipPart = instance_create(x, y, obj_tooltipText);
+                tooltipPart.str = ds_grid_get(global.inventory, 3, 0);
+            };
+        };
+    };
+    
+
+}else if(instance_exists(obj_tooltipContainer)){
+    instance_destroy(obj_tooltipContainer);
+    instance_destroy(obj_tooltipTitle);
+    instance_destroy(obj_tooltipText);
+};
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
