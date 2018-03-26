@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="30" name="datafiles">
+  <datafiles number="37" name="datafiles">
     <datafile>
       <name>choices.ini</name>
       <exists>-1</exists>
@@ -292,6 +292,125 @@
         </Config>
       </ConfigOptions>
       <filename>woodExplore.txt</filename>
+    </datafile>
+    <datafile>
+      <name>abandonedShopCounter.txt</name>
+      <exists>-1</exists>
+      <size>213</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>abandonedShopCounter.txt</filename>
+    </datafile>
+    <datafile>
+      <name>abandonedShopShelves.txt</name>
+      <exists>-1</exists>
+      <size>195</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>abandonedShopShelves.txt</filename>
+    </datafile>
+    <datafile>
+      <name>emptyHouseBasement.txt</name>
+      <exists>-1</exists>
+      <size>31</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>emptyHouseBasement.txt</filename>
+    </datafile>
+    <datafile>
+      <name>emptyHouseBedroom.txt</name>
+      <exists>-1</exists>
+      <size>140</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>emptyHouseBedroom.txt</filename>
+    </datafile>
+    <datafile>
+      <name>emptyHouseKitchen.txt</name>
+      <exists>-1</exists>
+      <size>86</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>emptyHouseKitchen.txt</filename>
+    </datafile>
+    <datafile>
+      <name>missingAidKit.txt</name>
+      <exists>-1</exists>
+      <size>367</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>missingAidKit.txt</filename>
+    </datafile>
+    <datafile>
+      <name>missingStick.txt</name>
+      <exists>-1</exists>
+      <size>157</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>missingStick.txt</filename>
     </datafile>
   </datafiles>
   <NewExtensions/>
