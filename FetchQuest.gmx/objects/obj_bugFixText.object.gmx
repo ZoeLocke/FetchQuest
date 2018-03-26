@@ -76,7 +76,7 @@ draw_set_valign(fa_middle);
 //var sectionLocation = ds_grid_value_y(global.navigation, 0, 0, 6, ds_grid_height(global.navigation), "homeWindow" + "Choices")
 //str = ds_grid_get(global.navigation, 1, sectionLocation);
 
-str = ds_grid_value_exists(global.navigation, 0, 0, ds_grid_width(global.navigation), ds_grid_height(global.navigation), "homeWindowChoices");
+//str = ds_grid_value_exists(global.navigation, 0, 0, ds_grid_width(global.navigation), ds_grid_height(global.navigation), "homeWindowChoices");
 
 //str = ds_exists(global.navigation, ds_type_grid);
 
