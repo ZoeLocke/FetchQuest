@@ -29,6 +29,7 @@
 global.shadowScale = 1.02;
 global.shadowOffset = 8;
 global.buttonPressDepth = 8;
+global.fontBlack = make_color_rgb(33,33,33);
 
 if(room == rm_main){
     
@@ -132,6 +133,9 @@ inventoryDestroy = "NOTHING";
 
 //---Run create inventory script---
 if(room == rm_main) scr_createInventory();
+
+//---Run create navigation script---
+if(room == rm_main) scr_createNavigation();
     
 //---Run controller script---
 if(room != rm_startScreen) scr_controller(target);
@@ -162,28 +166,6 @@ base_width = room_width;
 base_height = room_height;
 width = base_width;
 height = base_height;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Set timer to move to next screen
-if(room == rm_intro) alarm_set(3,120);
 </string>
           </argument>
         </arguments>

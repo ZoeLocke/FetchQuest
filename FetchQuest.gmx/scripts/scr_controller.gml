@@ -11,7 +11,7 @@ if(page == "intro"){
     file_text_close(file);
     
     //Create narrative text
-    var introText = instance_create(room_width / 2, room_height / 2, obj_introText);
+    var introText = instance_create((room_width / 2) - 1000, room_height / 2, obj_introText);
     introText.str = str; 
        
 }else{
@@ -61,6 +61,41 @@ if(page == "intro"){
     //---Update choice buttons---
     var k;
     for(k = 0; k < 5; k++){
+        //Set variables
+        var textX = 736;
+        var textY = 864 + (k * 128);    
+        var sectionLocation = ds_grid_value_y(global.navigation, 0, 0, 6, ds_grid_height(global.navigation), page + "Choices");    
+        
+        //Create text 
+        var choiceText = instance_create(textX, textY, obj_choiceText);
+        choiceText.str = ds_grid_get(global.navigation, k + 1, sectionLocation);  
+        
+        //Create buttons
+        var choiceButton = instance_create(textX, textY, obj_choiceButton);
+        var choiceShadow = instance_create(textX, textY + global.shadowOffset, obj_choiceButtonShadow);
+        
+        choiceButton.image_index = k;
+        choiceShadow.image_index = k;
+        choiceShadow.image_xscale = global.shadowScale;
+        
+        //Update button controls array with values for each button
+        choiceButton.buttonNumber = k;
+        choiceButton.target = ds_grid_get(global.navigation, k + 1, sectionLocation + 1); 
+        choiceButton.inventoryGet = ds_grid_get(global.navigation, k + 1, sectionLocation + 2);
+        choiceButton.inventoryNeed = ds_grid_get(global.navigation, k + 1, sectionLocation + 3);
+        choiceButton.inventoryMissingTarget = ds_grid_get(global.navigation, k + 1, sectionLocation + 4);
+        choiceButton.inventoryDestroy = ds_grid_get(global.navigation, k + 1, sectionLocation + 5);
+        
+        if(choiceText.str == "NOTHING"){
+            instance_deactivate_object(choiceButton);
+            instance_deactivate_object(choiceShadow);
+            instance_deactivate_object(choiceText);
+        };
+    };
+    /*
+    //---Update choice buttons---
+    var k;
+    for(k = 0; k < 5; k++){
         ini_open(working_directory + "choices.ini");
         
         //If current choice is not empty build its button
@@ -101,8 +136,8 @@ if(page == "intro"){
         choiceButton.inventoryDestroy = ini_read_string(page + "InventoryDestroy", k, "");
         
         ini_close();
-    }
-    
+    };
+    */
     //---Update image---
     ini_open(working_directory + "choices.ini");
     

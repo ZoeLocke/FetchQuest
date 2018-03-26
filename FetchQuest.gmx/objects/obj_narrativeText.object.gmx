@@ -55,7 +55,7 @@ depth = -1000;
             <string>///Draw text
 var parentContainer = instance_position(x, y, obj_textContainer);
 
-draw_set_colour(c_black);
+draw_set_colour(global.fontBlack);
 draw_set_font(fnt_body);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
