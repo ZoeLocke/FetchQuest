@@ -2,7 +2,7 @@
 
 //---Create navigation---
 //define navigation data as a ds grid. Columns are name, followed by the 5 options
-global.navigation = ds_grid_create(6,12);
+global.navigation = ds_grid_create(6,29);
 
 //populate inventory
 
@@ -53,7 +53,7 @@ ds_grid_set(global.navigation, 3,  5, "NOTHING");
 ds_grid_set(global.navigation, 4,  5, "NOTHING");
 ds_grid_set(global.navigation, 5,  5, "NOTHING");
 
-//---Interior--//
+//---LockedDoor--//
 ds_grid_set(global.navigation, 0,  6, "homeLockedDoorChoices");
 ds_grid_set(global.navigation, 1,  6, "Go to the window");
 ds_grid_set(global.navigation, 2,  6, "Go to bed");
@@ -95,3 +95,137 @@ ds_grid_set(global.navigation, 2,  11, "NOTHING");
 ds_grid_set(global.navigation, 3,  11, "NOTHING");
 ds_grid_set(global.navigation, 4,  11, "NOTHING");
 ds_grid_set(global.navigation, 5,  11, "NOTHING");
+
+//---Window--//
+ds_grid_set(global.navigation, 0,  12, "homeWindowChoices");
+ds_grid_set(global.navigation, 1,  12, "Jump through the window");
+ds_grid_set(global.navigation, 2,  12, "Go to the door");
+ds_grid_set(global.navigation, 3,  12, "Go to bed");
+ds_grid_set(global.navigation, 4,  12, "NOTHING");
+ds_grid_set(global.navigation, 5,  12, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  13, "homeWindowTargets");
+ds_grid_set(global.navigation, 1,  13, "exterior");
+ds_grid_set(global.navigation, 2,  13, "homeLockedDoor");
+ds_grid_set(global.navigation, 3,  13, "homeBed");
+ds_grid_set(global.navigation, 4,  13, "NOTHING");
+ds_grid_set(global.navigation, 5,  13, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  14, "homeWindowInventoryGet");
+ds_grid_set(global.navigation, 1,  14, "NOTHING");
+ds_grid_set(global.navigation, 2,  14, "Favourite Bone");
+ds_grid_set(global.navigation, 3,  14, "NOTHING");
+ds_grid_set(global.navigation, 4,  14, "NOTHING");
+ds_grid_set(global.navigation, 5,  14, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  15, "homeWindowInventoryNeed");
+ds_grid_set(global.navigation, 1,  15, "NOTHING");
+ds_grid_set(global.navigation, 2,  15, "NOTHING");
+ds_grid_set(global.navigation, 3,  15, "NOTHING");
+ds_grid_set(global.navigation, 4,  15, "NOTHING");
+ds_grid_set(global.navigation, 5,  15, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  16, "homeWindowInventoryMissingTarget");
+ds_grid_set(global.navigation, 1,  16, "NOTHING");
+ds_grid_set(global.navigation, 2,  16, "NOTHING");
+ds_grid_set(global.navigation, 3,  16, "NOTHING");
+ds_grid_set(global.navigation, 4,  16, "NOTHING");
+ds_grid_set(global.navigation, 5,  16, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  17, "homeWindowInventoryDestroy");
+ds_grid_set(global.navigation, 1,  17, "NOTHING");
+ds_grid_set(global.navigation, 2,  17, "NOTHING");
+ds_grid_set(global.navigation, 3,  17, "NOTHING");
+ds_grid_set(global.navigation, 4,  17, "NOTHING");
+ds_grid_set(global.navigation, 5,  17, "NOTHING");
+
+//---Bed--//
+ds_grid_set(global.navigation, 0,  18, "homeBedChoices");
+ds_grid_set(global.navigation, 1,  18, "Go to the door");
+ds_grid_set(global.navigation, 2,  18, "Go to the window");
+ds_grid_set(global.navigation, 3,  18, "NOTHING");
+ds_grid_set(global.navigation, 4,  18, "NOTHING");
+ds_grid_set(global.navigation, 5,  18, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  19, "homeBedTargets");
+ds_grid_set(global.navigation, 1,  19, "homeLockedDoor");
+ds_grid_set(global.navigation, 2,  19, "homeWindow");
+ds_grid_set(global.navigation, 3,  19, "NOTHING");
+ds_grid_set(global.navigation, 4,  19, "NOTHING");
+ds_grid_set(global.navigation, 5,  19, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  20, "homeBedInventoryGet");
+ds_grid_set(global.navigation, 1,  20, "NOTHING");
+ds_grid_set(global.navigation, 2,  20, "NOTHING");
+ds_grid_set(global.navigation, 3,  20, "NOTHING");
+ds_grid_set(global.navigation, 4,  20, "NOTHING");
+ds_grid_set(global.navigation, 5,  20, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  21, "homeBedInventoryNeed");
+ds_grid_set(global.navigation, 1,  21, "NOTHING");
+ds_grid_set(global.navigation, 2,  21, "NOTHING");
+ds_grid_set(global.navigation, 3,  21, "NOTHING");
+ds_grid_set(global.navigation, 4,  21, "NOTHING");
+ds_grid_set(global.navigation, 5,  21, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  22, "homeBedInventoryMissingTarget");
+ds_grid_set(global.navigation, 1,  22, "NOTHING");
+ds_grid_set(global.navigation, 2,  22, "NOTHING");
+ds_grid_set(global.navigation, 3,  22, "NOTHING");
+ds_grid_set(global.navigation, 4,  22, "NOTHING");
+ds_grid_set(global.navigation, 5,  22, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  23, "homeBedInventoryDestroy");
+ds_grid_set(global.navigation, 1,  23, "NOTHING");
+ds_grid_set(global.navigation, 2,  23, "NOTHING");
+ds_grid_set(global.navigation, 3,  23, "NOTHING");
+ds_grid_set(global.navigation, 4,  23, "NOTHING");
+ds_grid_set(global.navigation, 5,  23, "NOTHING");
+
+
+//-----------------------------------------------------------//
+//---------------------Exterior------------------------------//
+//-----------------------------------------------------------//
+
+//---Exterior--//
+ds_grid_set(global.navigation, 0,  24, "exteriorChoices");
+ds_grid_set(global.navigation, 1,  24, "Go to the door");
+ds_grid_set(global.navigation, 2,  24, "Go to the window");
+ds_grid_set(global.navigation, 3,  24, "NOTHING");
+ds_grid_set(global.navigation, 4,  24, "NOTHING");
+ds_grid_set(global.navigation, 5,  24, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  25, "exteriorTargets");
+ds_grid_set(global.navigation, 1,  25, "homeLockedDoor");
+ds_grid_set(global.navigation, 2,  25, "homeWindow");
+ds_grid_set(global.navigation, 3,  25, "NOTHING");
+ds_grid_set(global.navigation, 4,  25, "NOTHING");
+ds_grid_set(global.navigation, 5,  25, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  26, "exteriorInventoryGet");
+ds_grid_set(global.navigation, 1,  26, "NOTHING");
+ds_grid_set(global.navigation, 2,  26, "NOTHING");
+ds_grid_set(global.navigation, 3,  26, "NOTHING");
+ds_grid_set(global.navigation, 4,  26, "NOTHING");
+ds_grid_set(global.navigation, 5,  26, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  27, "exteriorInventoryNeed");
+ds_grid_set(global.navigation, 1,  27, "NOTHING");
+ds_grid_set(global.navigation, 2,  27, "NOTHING");
+ds_grid_set(global.navigation, 3,  27, "NOTHING");
+ds_grid_set(global.navigation, 4,  27, "NOTHING");
+ds_grid_set(global.navigation, 5,  27, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  28, "exteriorInventoryMissingTarget");
+ds_grid_set(global.navigation, 1,  28, "NOTHING");
+ds_grid_set(global.navigation, 2,  28, "NOTHING");
+ds_grid_set(global.navigation, 3,  28, "NOTHING");
+ds_grid_set(global.navigation, 4,  28, "NOTHING");
+ds_grid_set(global.navigation, 5,  28, "NOTHING");
+
+ds_grid_set(global.navigation, 0,  29, "exteriorInventoryDestroy");
+ds_grid_set(global.navigation, 1,  29, "NOTHING");
+ds_grid_set(global.navigation, 2,  29, "NOTHING");
+ds_grid_set(global.navigation, 3,  29, "NOTHING");
+ds_grid_set(global.navigation, 4,  29, "NOTHING");
+ds_grid_set(global.navigation, 5,  29, "NOTHING");
