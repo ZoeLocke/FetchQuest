@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="19" name="datafiles">
+  <datafiles number="30" name="datafiles">
     <datafile>
       <name>choices.ini</name>
       <exists>-1</exists>
@@ -105,6 +105,193 @@
         </Config>
       </ConfigOptions>
       <filename>homeWindow.txt</filename>
+    </datafile>
+    <datafile>
+      <name>abandonedShopInterior.txt</name>
+      <exists>-1</exists>
+      <size>449</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>abandonedShopInterior.txt</filename>
+    </datafile>
+    <datafile>
+      <name>emptyHouseInterior.txt</name>
+      <exists>-1</exists>
+      <size>405</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>emptyHouseInterior.txt</filename>
+    </datafile>
+    <datafile>
+      <name>exterior.txt</name>
+      <exists>-1</exists>
+      <size>476</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>exterior.txt</filename>
+    </datafile>
+    <datafile>
+      <name>missingCollar.txt</name>
+      <exists>-1</exists>
+      <size>365</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>missingCollar.txt</filename>
+    </datafile>
+    <datafile>
+      <name>missingDogFood.txt</name>
+      <exists>-1</exists>
+      <size>272</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>missingDogFood.txt</filename>
+    </datafile>
+    <datafile>
+      <name>woodInterior.txt</name>
+      <exists>-1</exists>
+      <size>416</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>woodInterior.txt</filename>
+    </datafile>
+    <datafile>
+      <name>yardInterior.txt</name>
+      <exists>-1</exists>
+      <size>353</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>yardInterior.txt</filename>
+    </datafile>
+    <datafile>
+      <name>missingOpenDogFood.txt</name>
+      <exists>-1</exists>
+      <size>450</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>missingOpenDogFood.txt</filename>
+    </datafile>
+    <datafile>
+      <name>woodCollar.txt</name>
+      <exists>-1</exists>
+      <size>203</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>woodCollar.txt</filename>
+    </datafile>
+    <datafile>
+      <name>woodDen.txt</name>
+      <exists>-1</exists>
+      <size>251</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>woodDen.txt</filename>
+    </datafile>
+    <datafile>
+      <name>woodExplore.txt</name>
+      <exists>-1</exists>
+      <size>247</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>woodExplore.txt</filename>
     </datafile>
   </datafiles>
   <NewExtensions/>

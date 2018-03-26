@@ -2,7 +2,7 @@
 
 //---Create navigation---
 //define navigation data as a ds grid. Columns are name, followed by the 5 options
-global.navigation = ds_grid_create(6,29);
+global.navigation = ds_grid_create(6,53);
 
 //populate inventory
 
@@ -172,7 +172,7 @@ ds_grid_set(global.navigation, 0,  24, "exteriorChoices");
 ds_grid_set(global.navigation, 1,  24, "Go to the wood");
 ds_grid_set(global.navigation, 2,  24, "Go to the empty house");
 ds_grid_set(global.navigation, 3,  24, "Go to the abandoned shop");
-ds_grid_set(global.navigation, 4,  24, "Go to the old man's yard");
+ds_grid_set(global.navigation, 4,  24, "Go to the old woman's yard");
 ds_grid_set(global.navigation, 5,  24, "Go home");
 ds_grid_set(global.navigation, 0,  25, "exteriorTargets");
 ds_grid_set(global.navigation, 1,  25, "woodInterior");
@@ -184,23 +184,182 @@ ds_grid_set(global.navigation, 0,  26, "exteriorInventoryGet");
 ds_grid_set(global.navigation, 1,  26, "NOTHING");
 ds_grid_set(global.navigation, 2,  26, "NOTHING");
 ds_grid_set(global.navigation, 3,  26, "NOTHING");
-ds_grid_set(global.navigation, 4,  26, "NOTHING");
+ds_grid_set(global.navigation, 4,  26, "Open Dog Food");
 ds_grid_set(global.navigation, 5,  26, "NOTHING");
 ds_grid_set(global.navigation, 0,  27, "exteriorInventoryNeed");
 ds_grid_set(global.navigation, 1,  27, "NOTHING");
 ds_grid_set(global.navigation, 2,  27, "Collar");
 ds_grid_set(global.navigation, 3,  27, "NOTHING");
-ds_grid_set(global.navigation, 4,  27, "Newspaper");
+ds_grid_set(global.navigation, 4,  27, "Dog Food");
 ds_grid_set(global.navigation, 5,  27, "NOTHING");
 ds_grid_set(global.navigation, 0,  28, "exteriorInventoryMissingTarget");
 ds_grid_set(global.navigation, 1,  28, "NOTHING");
 ds_grid_set(global.navigation, 2,  28, "missingCollar");
 ds_grid_set(global.navigation, 3,  28, "NOTHING");
-ds_grid_set(global.navigation, 4,  28, "missingNewspaper");
+ds_grid_set(global.navigation, 4,  28, "missingDogFood");
 ds_grid_set(global.navigation, 5,  28, "NOTHING");
 ds_grid_set(global.navigation, 0,  29, "exteriorInventoryDestroy");
 ds_grid_set(global.navigation, 1,  29, "NOTHING");
 ds_grid_set(global.navigation, 2,  29, "Collar");
 ds_grid_set(global.navigation, 3,  29, "NOTHING");
-ds_grid_set(global.navigation, 4,  29, "Newspaper");
+ds_grid_set(global.navigation, 4,  29, "Dog Food");
 ds_grid_set(global.navigation, 5,  29, "NOTHING");
+
+
+
+//-----------------------------------------------------------//
+//-----------------------Wood--------------------------------//
+//-----------------------------------------------------------//
+
+//--woodInterior--//
+ds_grid_set(global.navigation, 0, 30, "woodInteriorChoices" );
+ds_grid_set(global.navigation, 1, 30, "Explore the wood" );
+ds_grid_set(global.navigation, 2, 30, "Go to the den" );
+ds_grid_set(global.navigation, 3, 30, "Check out the shiny thing" );
+ds_grid_set(global.navigation, 4, 30, "Leave the woods" );
+ds_grid_set(global.navigation, 5, 30, "NOTHING" );
+ds_grid_set(global.navigation, 0, 31, "woodInteriorTargets" );
+ds_grid_set(global.navigation, 1, 31, "woodExplore" );
+ds_grid_set(global.navigation, 2, 31, "woodDen" );
+ds_grid_set(global.navigation, 3, 31, "WoodCollar" );
+ds_grid_set(global.navigation, 4, 31, "exterior" );
+ds_grid_set(global.navigation, 5, 31, "NOTHING" );
+ds_grid_set(global.navigation, 0, 32, "woodInteriorInventoryGet" );
+ds_grid_set(global.navigation, 1, 32, "Stick" );
+ds_grid_set(global.navigation, 2, 32, "Dog Food" );
+ds_grid_set(global.navigation, 3, 32, "Collar" );
+ds_grid_set(global.navigation, 4, 32, "NOTHING" );
+ds_grid_set(global.navigation, 5, 32, "NOTHING" );
+ds_grid_set(global.navigation, 0, 33, "woodInteriorInventoryNeed" );
+ds_grid_set(global.navigation, 1, 33, "NOTHING" );
+ds_grid_set(global.navigation, 2, 33, "NOTHING" );
+ds_grid_set(global.navigation, 3, 33, "Open Dog Food" );
+ds_grid_set(global.navigation, 4, 33, "NOTHING" );
+ds_grid_set(global.navigation, 5, 33, "NOTHING" );
+ds_grid_set(global.navigation, 0, 34, "woodInteriorInventoryMissingTarget" );
+ds_grid_set(global.navigation, 1, 34, "NOTHING" );
+ds_grid_set(global.navigation, 2, 34, "NOTHING" );
+ds_grid_set(global.navigation, 3, 34, "missingOpenDogFood" );
+ds_grid_set(global.navigation, 4, 34, "NOTHING" );
+ds_grid_set(global.navigation, 5, 34, "NOTHING" );
+ds_grid_set(global.navigation, 0, 35, "woodInteriorInventoryDestroy" );
+ds_grid_set(global.navigation, 1, 35, "NOTHING" );
+ds_grid_set(global.navigation, 2, 35, "NOTHING" );
+ds_grid_set(global.navigation, 3, 35, "Open Dog Food" );
+ds_grid_set(global.navigation, 4, 35, "NOTHING" );
+ds_grid_set(global.navigation, 5, 35, "NOTHING" );
+
+//--woodExplore--//
+ds_grid_set(global.navigation, 0, 36, "woodExploreChoices" );
+ds_grid_set(global.navigation, 1, 36, "Leave the wood" );
+ds_grid_set(global.navigation, 2, 36, "Go to the den" );
+ds_grid_set(global.navigation, 3, 36, "Check out the shiny thing" );
+ds_grid_set(global.navigation, 4, 36, "NOTHING" );
+ds_grid_set(global.navigation, 5, 36, "NOTHING" );
+ds_grid_set(global.navigation, 0, 37, "woodExploreTargets" );
+ds_grid_set(global.navigation, 1, 37, "exterior" );
+ds_grid_set(global.navigation, 2, 37, "woodDen" );
+ds_grid_set(global.navigation, 3, 37, "woodCollar" );
+ds_grid_set(global.navigation, 4, 37, "NOTHING" );
+ds_grid_set(global.navigation, 5, 37, "NOTHING" );
+ds_grid_set(global.navigation, 0, 38, "woodExploreInventoryGet" );
+ds_grid_set(global.navigation, 1, 38, "NOTHING" );
+ds_grid_set(global.navigation, 2, 38, "Dog Food" );
+ds_grid_set(global.navigation, 3, 38, "Collar" );
+ds_grid_set(global.navigation, 4, 38, "NOTHING" );
+ds_grid_set(global.navigation, 5, 38, "NOTHING" );
+ds_grid_set(global.navigation, 0, 39, "woodExploreInventoryNeed" );
+ds_grid_set(global.navigation, 1, 39, "NOTHING" );
+ds_grid_set(global.navigation, 2, 39, "NOTHING" );
+ds_grid_set(global.navigation, 3, 39, "Open Dog Food" );
+ds_grid_set(global.navigation, 4, 39, "NOTHING" );
+ds_grid_set(global.navigation, 5, 39, "NOTHING" );
+ds_grid_set(global.navigation, 0, 40, "woodExploreInventoryMissingTarget" );
+ds_grid_set(global.navigation, 1, 40, "NOTHING" );
+ds_grid_set(global.navigation, 2, 40, "NOTHING" );
+ds_grid_set(global.navigation, 3, 40, "missingOpenDogFood" );
+ds_grid_set(global.navigation, 4, 40, "NOTHING" );
+ds_grid_set(global.navigation, 5, 40, "NOTHING" );
+ds_grid_set(global.navigation, 0, 41, "woodExploreInventoryDestroy" );
+ds_grid_set(global.navigation, 1, 41, "NOTHING" );
+ds_grid_set(global.navigation, 2, 41, "NOTHING" );
+ds_grid_set(global.navigation, 3, 41, "Open Dog Food" );
+ds_grid_set(global.navigation, 4, 41, "NOTHING" );
+ds_grid_set(global.navigation, 5, 41, "NOTHING" );
+
+//--woodDen--//
+ds_grid_set(global.navigation, 0, 42, "woodDenChoices" );
+ds_grid_set(global.navigation, 1, 42, "Check out the shiny thing" );
+ds_grid_set(global.navigation, 2, 42, "Explore the woods" );
+ds_grid_set(global.navigation, 3, 42, "Leave the woods" );
+ds_grid_set(global.navigation, 4, 42, "NOTHING" );
+ds_grid_set(global.navigation, 5, 42, "NOTHING" );
+ds_grid_set(global.navigation, 0, 43, "woodDenTargets" );
+ds_grid_set(global.navigation, 1, 43, "woodCollar" );
+ds_grid_set(global.navigation, 2, 43, "woodExplore" );
+ds_grid_set(global.navigation, 3, 43, "exterior" );
+ds_grid_set(global.navigation, 4, 43, "NOTHING" );
+ds_grid_set(global.navigation, 5, 43, "NOTHING" );
+ds_grid_set(global.navigation, 0, 44, "woodDenInventoryGet" );
+ds_grid_set(global.navigation, 1, 44, "Collar" );
+ds_grid_set(global.navigation, 2, 44, "Stick" );
+ds_grid_set(global.navigation, 3, 44, "NOTHING" );
+ds_grid_set(global.navigation, 4, 44, "NOTHING" );
+ds_grid_set(global.navigation, 5, 44, "NOTHING" );
+ds_grid_set(global.navigation, 0, 45, "woodDenInventoryNeed" );
+ds_grid_set(global.navigation, 1, 45, "Open Dog Food" );
+ds_grid_set(global.navigation, 2, 45, "NOTHING" );
+ds_grid_set(global.navigation, 3, 45, "NOTHING" );
+ds_grid_set(global.navigation, 4, 45, "NOTHING" );
+ds_grid_set(global.navigation, 5, 45, "NOTHING" );
+ds_grid_set(global.navigation, 0, 46, "woodDenInventoryMissingTarget" );
+ds_grid_set(global.navigation, 1, 46, "missingOpenDogFood" );
+ds_grid_set(global.navigation, 2, 46, "NOTHING" );
+ds_grid_set(global.navigation, 3, 46, "NOTHING" );
+ds_grid_set(global.navigation, 4, 46, "NOTHING" );
+ds_grid_set(global.navigation, 5, 46, "NOTHING" );
+ds_grid_set(global.navigation, 0, 47, "woodDenInventoryDestroy" );
+ds_grid_set(global.navigation, 1, 47, "Open Dog Food" );
+ds_grid_set(global.navigation, 2, 47, "NOTHING" );
+ds_grid_set(global.navigation, 3, 47, "NOTHING" );
+ds_grid_set(global.navigation, 4, 47, "NOTHING" );
+ds_grid_set(global.navigation, 5, 47, "NOTHING" );
+
+//--woodCollar--//
+ds_grid_set(global.navigation, 0, 48, "woodCollarChoices" );
+ds_grid_set(global.navigation, 1, 48, "Go to the den" );
+ds_grid_set(global.navigation, 2, 48, "Explore the wood" );
+ds_grid_set(global.navigation, 3, 48, "Leave the wood" );
+ds_grid_set(global.navigation, 4, 48, "NOTHING" );
+ds_grid_set(global.navigation, 5, 48, "NOTHING" );
+ds_grid_set(global.navigation, 0, 49, "woodCollarTargets" );
+ds_grid_set(global.navigation, 1, 49, "woodDen" );
+ds_grid_set(global.navigation, 2, 49, "woodExplore" );
+ds_grid_set(global.navigation, 3, 49, "exterior" );
+ds_grid_set(global.navigation, 4, 49, "NOTHING" );
+ds_grid_set(global.navigation, 5, 49, "NOTHING" );
+ds_grid_set(global.navigation, 0, 50, "woodCollarInventoryGet" );
+ds_grid_set(global.navigation, 1, 50, "Dog Food" );
+ds_grid_set(global.navigation, 2, 50, "Stick" );
+ds_grid_set(global.navigation, 3, 50, "NOTHING" );
+ds_grid_set(global.navigation, 4, 50, "NOTHING" );
+ds_grid_set(global.navigation, 5, 50, "NOTHING" );
+ds_grid_set(global.navigation, 0, 51, "woodCollarInventoryNeed" );
+ds_grid_set(global.navigation, 1, 51, "NOTHING" );
+ds_grid_set(global.navigation, 2, 51, "NOTHING" );
+ds_grid_set(global.navigation, 3, 51, "NOTHING" );
+ds_grid_set(global.navigation, 4, 51, "NOTHING" );
+ds_grid_set(global.navigation, 5, 51, "NOTHING" );
+ds_grid_set(global.navigation, 0, 52, "woodCollarInventoryMissingTarget" );
+ds_grid_set(global.navigation, 1, 52, "NOTHING" );
+ds_grid_set(global.navigation, 2, 52, "NOTHING" );
+ds_grid_set(global.navigation, 3, 52, "NOTHING" );
+ds_grid_set(global.navigation, 4, 52, "NOTHING" );
+ds_grid_set(global.navigation, 5, 52, "NOTHING" );
+ds_grid_set(global.navigation, 0, 53, "woodCollarInventoryDestroy" );
+ds_grid_set(global.navigation, 1, 53, "NOTHING" );
+ds_grid_set(global.navigation, 2, 53, "NOTHING" );
+ds_grid_set(global.navigation, 3, 53, "NOTHING" );
+ds_grid_set(global.navigation, 4, 53, "NOTHING" );
+ds_grid_set(global.navigation, 5, 53, "NOTHING" );
+
