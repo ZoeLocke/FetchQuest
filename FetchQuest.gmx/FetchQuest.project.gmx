@@ -448,7 +448,6 @@
       </sprites>
       <sprites name="Images">
         <sprite>sprites\spr_abandonedShopCounter</sprite>
-        <sprite>sprites\spr_abandonedHouseKitchen</sprite>
         <sprite>sprites\spr_abandonedShopInterior</sprite>
         <sprite>sprites\spr_abandonedShopShelves</sprite>
         <sprite>sprites\spr_emptyHouseBedroom</sprite>

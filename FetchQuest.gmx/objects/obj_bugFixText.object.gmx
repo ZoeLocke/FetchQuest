@@ -80,6 +80,8 @@ draw_set_valign(fa_middle);
 
 //str = ds_exists(global.navigation, ds_type_grid);
 
+//str = obj_image.sprite_index;
+
 draw_text(x, y, str);
 
 

@@ -150,17 +150,11 @@ if(page == "intro"){
         
         ini_close();
     };
-    
-    //---Update image---
-    ini_open(working_directory + "choices.ini");
-    
-    //Get image index
-    var img = ini_read_real(page + "Image", "image_index", 0);
-    
-    //Update image index for sprite
-    obj_image.image_index = img;
-    
-    ini_close();
-    */
+  */  
 
-}
+    //---Update image---
+    var sprite = asset_get_index("spr_" + page);
+    obj_image.sprite_index = sprite;
+        
+        
+};

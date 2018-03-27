@@ -279,20 +279,24 @@ alarm_set(1, 2);
           <argument>
             <kind>1</kind>
             <string>///Change page variable and return controller script
-if(target == "outro"){room_goto(rm_outro)}else{
+var itemMissingFail = 0;
+var itemLocation;
+
+//Start game
 if(room == rm_startScreen){
     room_goto(rm_intro);
-} else if(target = "Quit"){
-        game_restart();
-} else {
+}else{
 
-var itemMissingFail = 0;
+//Retsart game
+if(target = "Quit"){
+    game_restart();
+}else{
 
     //---Check for required items---
     if(inventoryNeed != "NOTHING"){
     
         //Find item in grid by name
-        var itemLocation = ds_grid_value_y(global.inventory, 0, 0, 5, ds_grid_height(global.inventory), inventoryNeed);
+        itemLocation = ds_grid_value_y(global.inventory, 0, 0, 5, ds_grid_height(global.inventory), inventoryNeed);
        
         //Set page target to missing item target
         if(ds_grid_get(global.inventory, 1, itemLocation) == 0){
@@ -305,7 +309,7 @@ var itemMissingFail = 0;
     if(inventoryGet != "NOTHING" &amp;&amp; itemMissingFail == 0){
         
         //Find item in grid by name
-        var itemLocation = ds_grid_value_y(global.inventory, 0, 0, 5, ds_grid_height(global.inventory), inventoryGet);
+        itemLocation = ds_grid_value_y(global.inventory, 0, 0, 5, ds_grid_height(global.inventory), inventoryGet);
         
         //Set found value for that item to true
         ds_grid_set(global.inventory, 1, itemLocation, 1);
@@ -316,16 +320,17 @@ var itemMissingFail = 0;
     if(inventoryDestroy != "NOTHING" &amp;&amp; itemMissingFail == 0){
         
         //Find item in grid by name
-        var itemLocation = ds_grid_value_y(global.inventory, 0, 0, 5, ds_grid_height(global.inventory), inventoryDestroy);
+        itemLocation = ds_grid_value_y(global.inventory, 0, 0, 5, ds_grid_height(global.inventory), inventoryDestroy);
         
         //If the item has been found (so it's not destroyed before it's used) destroy it
         if(ds_grid_get(global.inventory, 1, itemLocation) == 1){
             ds_grid_set(global.inventory, 2, itemLocation, 1);
         };
     };
-//---Set new page---
-scr_controller(target);
-};
+    
+    //---Launch next page
+    if(target == "outro" &amp;&amp; itemMissingFail == 0){room_goto(rm_outro)}else{scr_controller(target);};
+    }
 };
 </string>
           </argument>
