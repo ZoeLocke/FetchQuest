@@ -175,9 +175,14 @@ if(room == rm_outro) {
           <argument>
             <kind>1</kind>
             <string>///Set screen display
-
+/*
 base_width = room_width;
 base_height = room_height;
+width = base_width;
+height = base_height;
+*/
+base_width = view_wview;
+base_height = view_hview;
 width = base_width;
 height = base_height;
 </string>
@@ -392,6 +397,7 @@ if (browser_width != width || browser_height != height)
     height = min(base_height, browser_height);
     scr_scaleCanvas(base_width, base_height, width, height, true);
     }
+
 </string>
           </argument>
         </arguments>
